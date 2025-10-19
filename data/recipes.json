@@ -1,0 +1,98 @@
+[
+  {
+    "product": "Panatura BBQ",
+    "title": "Alette croccanti al forno",
+    "intro": "Croccanti fuori, succose dentro.",
+    "ingredients": [
+      "500 g alette di pollo",
+      "3 cucchiai Panatura BBQ",
+      "olio EVO",
+      "sale"
+    ],
+    "steps": [
+      "Asciuga le alette",
+      "Passale nella panatura",
+      "Condisci con poco olio",
+      "Forno 190°C 30 minuti"
+    ]
+  },
+  {
+    "product": "Panatura Limone e Prezzemolo",
+    "title": "Merluzzo gratinato",
+    "intro": "Profumato e leggero.",
+    "ingredients": [
+      "4 filetti di merluzzo",
+      "Panatura Limone e Prezzemolo",
+      "olio EVO"
+    ],
+    "steps": [
+      "Disponi i filetti",
+      "Copri con panatura",
+      "Irrora olio",
+      "Forno 180°C 15 minuti"
+    ]
+  },
+  {
+    "product": "Panatura Mais Croccante",
+    "title": "Zucchine croccanti",
+    "intro": "Snack rapido e gustoso.",
+    "ingredients": [
+      "2 zucchine",
+      "Panatura Mais Croccante",
+      "sale",
+      "olio"
+    ],
+    "steps": [
+      "Affetta le zucchine",
+      "Passale nella panatura",
+      "Forno 200°C 18 minuti"
+    ]
+  },
+  {
+    "product": "Marinatura BBQ Affumicato",
+    "title": "Costine glassate",
+    "intro": "Sapore intenso in poco sforzo.",
+    "ingredients": [
+      "800 g costine",
+      "Marinatura BBQ Affumicato"
+    ],
+    "steps": [
+      "Massaggia le costine",
+      "Riposo 30 minuti",
+      "Forno 180°C 45 minuti"
+    ]
+  },
+  {
+    "product": "Aromi per arrosto",
+    "title": "Patate saporite",
+    "intro": "Contorno rustico e profumato.",
+    "ingredients": [
+      "700 g patate",
+      "Aromi per arrosto",
+      "olio EVO",
+      "sale"
+    ],
+    "steps": [
+      "Taglia a spicchi",
+      "Condisci con aromi e olio",
+      "Forno 200°C 30 minuti"
+    ]
+  },
+  {
+    "product": "Pesto di pistacchio cremoso",
+    "title": "Pasta cremosa al pistacchio",
+    "intro": "Pronta in 12 minuti.",
+    "ingredients": [
+      "320 g pasta corta",
+      "3 cucchiai Pesto di pistacchio",
+      "200 ml panna",
+      "granella di pistacchio"
+    ],
+    "steps": [
+      "Cuoci la pasta",
+      "Scalda panna e pesto",
+      "Manteca con la pasta",
+      "Completa con granella"
+    ]
+  }
+]

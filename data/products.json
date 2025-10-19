@@ -1,0 +1,50 @@
+{
+  "categories": [
+    {
+      "name": "Panature",
+      "description": "Panature croccanti e saporite per carne, pesce e verdure.",
+      "items": [
+        "Panatura Pizzaiola",
+        "Panatura Limone e Prezzemolo",
+        "Panatura Primavera",
+        "Panatura Crispy Bacon",
+        "Panatura Curry",
+        "Panatura Mais Croccante",
+        "Panatura BBQ",
+        "Panatura Semplice",
+        "Panatura Bacon",
+        "Panatura Pepe Rosa e Limone",
+        "Panatura Crispy Pizzaiola",
+        "Panatura Crispy BBQ",
+        "Pangrattato Aglio e Prezzemolo"
+      ]
+    },
+    {
+      "name": "Marinature",
+      "description": "Marinature pronte per ricette ricche e profumate.",
+      "items": [
+        "Marinatura al Limone",
+        "Marinatura Basilico e Rosmarino",
+        "Marinatura BBQ Affumicato",
+        "Marinatura Arrosto",
+        "Marinatura Curry"
+      ]
+    },
+    {
+      "name": "Aromi",
+      "description": "Aromi per arrosti e preparazioni di pasta.",
+      "items": [
+        "Aromi per arrosto",
+        "Spaghettata aglio, olio e prezzemolo",
+        "Fiori eduli per cucina"
+      ]
+    },
+    {
+      "name": "Pesto",
+      "description": "Pesto di pistacchio cremoso.",
+      "items": [
+        "Pesto di pistacchio cremoso"
+      ]
+    }
+  ]
+}
