@@ -4,73 +4,65 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nutrì Box | Nutri‑Food</title>
-    <meta name="description" content="Scopri cosa include la Nutrì Box di Nutri‑Food e ordina la tua selezione artigianale.">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/nutri.png" type="image/svg+xml">
   </head>
   <body>
     <header class="header">
       <div class="container wrap">
         <a class="brand" href="index.html">
-          <img class="brand-logo" src="assets/logo.svg" alt="Logo Nutri">
+          <img class="brand-logo" src="assets/nutri.png" alt="Logo Nutrì">
           <span>Nutri‑Food</span>
         </a>
         <nav class="nav">
           <a href="index.html">Home</a>
+          <a href="chi-siamo.html">Chi Siamo</a>
           <a href="prodotti.html">Prodotti</a>
           <a href="ricette.html">Ricette</a>
+          <a href="nutri-box.html" aria-current="page">Nutrì Box</a>
           <a href="index.html#contatti">Contatti</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container inner">
-          <div>
-            <h1>Scopri la Nutrì Box</h1>
-            <p>Una selezione curata di panature, marinature, aromi e pesto artigianali pronta da spedire direttamente a casa tua. Perfetta per chi vuole tenere sempre in dispensa il gusto autentico Nutrì.</p>
-            <ul class="hero-list">
+    <main class="section">
+      <div class="container">
+        <header class="page-header">
+          <h1>Scopri la Nutrì Box</h1>
+          <p>Una selezione curata di panature, marinature, aromi e pesto artigianali pronta da spedire direttamente a casa tua. Perfetta per chi vuole tenere sempre in dispensa il gusto autentico Nutrì.</p>
+          <a class="btn btn-solid" href="mailto:ordini@nutri-food.it?subject=Ordine%20Nutrì%20Box">Ordina la tua Nutrì Box</a>
+        </header>
+
+        <div class="grid box-grid">
+          <article class="card">
+            <h2>Cosa include</h2>
+            <ul class="feature-list">
               <li>Box tematiche pensate per carne, pesce o cucina vegetariana.</li>
               <li>Ricettario digitale incluso per sfruttare al meglio ogni preparazione.</li>
               <li>Spedizione veloce e packaging eco-responsabile.</li>
             </ul>
-            <div class="cta-group">
-              <a class="btn btn-solid" href="https://shop.nutri-food.it/box" target="_blank" rel="noopener">Ordina la tua Nutrì Box</a>
-            </div>
-          </div>
-          <div class="spotlight-card">
-            <h3>Cosa contiene</h3>
+            <p><strong>Disponibile anche in formato regalo</strong> con biglietto personalizzato.</p>
+          </article>
+          <article class="card">
+            <h2>Cosa contiene</h2>
             <p>Ogni Nutrì Box include una selezione stagionale dei nostri best seller e un piccolo extra a sorpresa per provare nuovi abbinamenti.</p>
-            <p class="muted">Disponibile anche in formato regalo con biglietto personalizzato.</p>
-          </div>
+            <ul class="feature-list">
+              <li>Panature croccanti e marinature aromatiche selezionate.</li>
+              <li>Aromi per arrosti, condimenti per pasta e pesto di pistacchio.</li>
+              <li>Consigli di abbinamento e tre ricette esclusive firmate dal nostro laboratorio.</li>
+            </ul>
+          </article>
         </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <h2 style="color:var(--accent);margin:0 0 12px 0;">Come funziona</h2>
-          <div class="grid">
-            <div class="card">
-              <h3>Scegli la box</h3>
-              <p>Seleziona la proposta che preferisci tra le varianti pensate per carne, pesce o cucina vegetariana.</p>
-            </div>
-            <div class="card">
-              <h3>Ricevi a casa</h3>
-              <p>Spedizione rapida e packaging eco-responsabile per mantenere freschezza e qualità.</p>
-            </div>
-            <div class="card">
-              <h3>Prepara e gusta</h3>
-              <p>Segui il ricettario digitale incluso e porta in tavola nuove combinazioni con semplicità.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     </main>
 
     <footer>
       <div class="container">
-        <p>📧 <a href="mailto:info@nutri-food.it">info@nutri-food.it</a></p>
+        <p><strong>Nutrì Food Lab</strong> · Via Libertà 128 · Palermo</p>
+        <p>📧 <a href="mailto:info@nutri-food.it">info@nutri-food.it</a> · ☎️ +39 091 600 1234</p>
       </div>
     </footer>
+
+    <script src="scripts/app.js" defer></script>
   </body>
 </html>
