@@ -67,6 +67,28 @@ function createImagePlaceholder(title, variant, accent){
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
 
+function createRecipePlaceholder(title, accent, difficulty){
+  const base = accent || '#ffb979';
+  const secondary = adjustColor(base, 35);
+  const safeTitle = escapeXml(title);
+  const safeDifficulty = escapeXml(difficulty || '');
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" role="img" aria-label="${safeTitle} pronto da servire">
+    <defs>
+      <linearGradient id="recipeGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="${base}"/>
+        <stop offset="100%" stop-color="${secondary}"/>
+      </linearGradient>
+    </defs>
+    <rect width="360" height="240" rx="26" fill="url(#recipeGrad)"/>
+    <circle cx="300" cy="54" r="46" fill="rgba(0,0,0,0.18)"/>
+    <text x="28" y="78" font-size="24" font-family="'Poppins','Segoe UI',sans-serif" fill="rgba(0,0,0,0.18)" font-weight="700">Nutrì Food Lab</text>
+    <text x="28" y="122" font-size="26" font-family="'Poppins','Segoe UI',sans-serif" fill="#121" font-weight="600">${safeTitle}</text>
+    <text x="28" y="160" font-size="18" font-family="'Poppins','Segoe UI',sans-serif" fill="#111" opacity="0.85">${safeDifficulty}</text>
+    <text x="28" y="198" font-size="14" font-family="'Poppins','Segoe UI',sans-serif" fill="#111" opacity="0.7">Preparazione artigianale pronta da stampare o condividere</text>
+  </svg>`;
+  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+}
+
 function applyNutriBranding(){
   document.querySelectorAll('img[data-logo="nutri"]').forEach(img => {
     if(img.getAttribute('src') !== NUTRI_LOGO_DATA){
@@ -134,12 +156,162 @@ function createShareBar({title, text, url, node}){
 }
 
 let cachedProducts = null;
+let recipeIndex = [];
+const recipeFilters = { category: 'all', product: 'all', difficulty: 'all' };
 
 async function loadProductsData(){
   if(!cachedProducts){
     cachedProducts = await loadJSON('data/products.json');
   }
   return cachedProducts;
+}
+
+function buildRecipeIndex(data){
+  recipeIndex = [];
+  data.categories.forEach(category => {
+    category.items.forEach(product => {
+      product.recipes.forEach(recipe => {
+        recipeIndex.push({
+          ...recipe,
+          category: category.name,
+          productName: product.name,
+          productSummary: product.summary,
+          productSlug: product.slug,
+          accentColor: product.accentColor,
+          image: createRecipePlaceholder(recipe.title, product.accentColor, recipe.difficulty)
+        });
+      });
+    });
+  });
+}
+
+function populateRecipeProductOptions(data, select){
+  const options = [];
+  if(recipeFilters.category === 'all'){
+    data.categories.forEach(category => {
+      category.items.forEach(product => {
+        options.push({ value: product.slug, label: `${product.name} · ${category.name}` });
+      });
+    });
+  }else{
+    const category = data.categories.find(cat => cat.name === recipeFilters.category);
+    if(category){
+      category.items.forEach(product => {
+        options.push({ value: product.slug, label: product.name });
+      });
+    }
+  }
+  select.innerHTML = '';
+  const allOption = document.createElement('option');
+  allOption.value = 'all';
+  allOption.textContent = 'Tutti i prodotti';
+  select.appendChild(allOption);
+  options.forEach(option => {
+    const opt = document.createElement('option');
+    opt.value = option.value;
+    opt.textContent = option.label;
+    select.appendChild(opt);
+  });
+  if(!options.some(option => option.value === recipeFilters.product)){
+    recipeFilters.product = 'all';
+  }
+  select.value = recipeFilters.product;
+}
+
+function setupRecipeFilters(data){
+  const typeSelect = document.getElementById('recipeTypeFilter');
+  const productSelect = document.getElementById('recipeProductFilter');
+  const difficultySelect = document.getElementById('recipeDifficultyFilter');
+  if(!typeSelect || !productSelect || !difficultySelect) return;
+
+  if(!typeSelect.dataset.initialized){
+    typeSelect.innerHTML = '';
+    const allOption = document.createElement('option');
+    allOption.value = 'all';
+    allOption.textContent = 'Tutte le tipologie';
+    typeSelect.appendChild(allOption);
+    data.categories.forEach(category => {
+      const option = document.createElement('option');
+      option.value = category.name;
+      option.textContent = category.name;
+      typeSelect.appendChild(option);
+    });
+    typeSelect.dataset.initialized = 'true';
+  }
+
+  typeSelect.value = recipeFilters.category;
+  difficultySelect.value = recipeFilters.difficulty;
+  populateRecipeProductOptions(data, productSelect);
+
+  if(!typeSelect.dataset.bound){
+    typeSelect.addEventListener('change', () => {
+      recipeFilters.category = typeSelect.value;
+      recipeFilters.product = 'all';
+      populateRecipeProductOptions(data, productSelect);
+      renderRecipeCards();
+    });
+    typeSelect.dataset.bound = 'true';
+  }
+
+  if(!productSelect.dataset.bound){
+    productSelect.addEventListener('change', () => {
+      recipeFilters.product = productSelect.value;
+      renderRecipeCards();
+    });
+    productSelect.dataset.bound = 'true';
+  }
+
+  if(!difficultySelect.dataset.bound){
+    difficultySelect.addEventListener('change', () => {
+      recipeFilters.difficulty = difficultySelect.value;
+      renderRecipeCards();
+    });
+    difficultySelect.dataset.bound = 'true';
+  }
+}
+
+function getFilteredRecipes(){
+  return recipeIndex.filter(recipe => {
+    if(recipeFilters.category !== 'all' && recipe.category !== recipeFilters.category) return false;
+    if(recipeFilters.product !== 'all' && recipe.productSlug !== recipeFilters.product) return false;
+    if(recipeFilters.difficulty !== 'all' && recipe.difficulty !== recipeFilters.difficulty) return false;
+    return true;
+  });
+}
+
+function renderRecipeCards(){
+  const list = document.getElementById('recipesList');
+  if(!list) return;
+  list.innerHTML = '';
+  const recipes = getFilteredRecipes();
+  if(!recipes.length){
+    list.appendChild(el('p',{class:'muted'},['Nessuna ricetta corrisponde ai filtri selezionati.']));
+    return;
+  }
+  recipes.forEach(recipe => {
+    const diffSlug = (recipe.difficulty || '').toLowerCase().replace(/\s+/g,'-');
+    const card = el('article',{class:'card recipe-card',id:recipe.id},[
+      el('figure',{class:'recipe-figure'},[
+        el('img',{src:recipe.image || createRecipePlaceholder(recipe.title, recipe.accentColor, recipe.difficulty),alt:`${recipe.title} - piatto finito`},[])
+      ]),
+      el('div',{class:'recipe-meta'},[
+        el('span',{class:`badge difficulty difficulty-${diffSlug}`},[recipe.difficulty]),
+        el('span',{class:'muted'},[recipe.category]),
+        el('a',{href:productDetailUrl(recipe.productSlug, recipe.id),class:'recipe-meta-link'},[recipe.productName])
+      ]),
+      el('h3',{},[recipe.title]),
+      el('p',{},[recipe.intro]),
+      el('p',{},[el('strong',{},['Ingredienti: ']), recipe.ingredients.join(', ')]),
+      el('ol',{},recipe.steps.map(step => el('li',{},[step])))
+    ]);
+    card.appendChild(createShareBar({
+      title: recipe.title,
+      text: `${recipe.productName} · ${recipe.difficulty}`,
+      url: pageUrlWithHash(recipe.id),
+      node: card
+    }));
+    list.appendChild(card);
+  });
 }
 
 async function renderProductsGrid(){
@@ -162,6 +334,80 @@ async function renderProductsGrid(){
       productsList
     ]));
   });
+  if(!product){
+    container.innerHTML = `<div class="card"><h1>Prodotto non trovato</h1><p>Il prodotto richiesto non è presente. Torna ai <a href="prodotti.html">prodotti Nutrì</a>.</p></div>`;
+    return;
+  }
+  const accent = product.accentColor || '#ffb979';
+  const packagingImage = createImagePlaceholder(product.name, 'packaging', accent);
+  const preparedImage = createImagePlaceholder(product.name, 'prepared', accent);
+  const navProduct = document.querySelector('.nav a[href="prodotti.html"]');
+  if(navProduct) navProduct.setAttribute('aria-current','page');
+  const header = el('header',{class:'page-header product-header'},[
+    el('p',{class:'breadcrumb'},[el('a',{href:'prodotti.html'},['Prodotti']), ' / ', categoryName]),
+    el('h1',{},[product.name]),
+    el('p',{},[product.summary])
+  ]);
+
+  const gallery = el('div',{class:'product-gallery'},[
+    el('figure',{class:'card'},[
+      el('img',{src:packagingImage,alt:`Confezione ${product.name}`},[]),
+      el('figcaption',{},['Confezione'])
+    ]),
+    el('figure',{class:'card'},[
+      el('img',{src:preparedImage,alt:`${product.name} pronto da gustare`},[]),
+      el('figcaption',{},['Servizio suggerito'])
+    ])
+  ]);
+
+  const ingredients = el('div',{class:'card'},[
+    el('h2',{},['Ingredienti base']),
+    el('ul',{},product.ingredients.map(item=> el('li',{},[item])))
+  ]);
+
+  const pairings = el('div',{class:'card'},[
+    el('h2',{},['Abbinamenti consigliati']),
+    el('ul',{},[
+      el('li',{},[`Proteina: ${product.pairings.protein}`]),
+      el('li',{},[`Verdura: ${product.pairings.vegetable}`]),
+      el('li',{},[`Carboidrato: ${product.pairings.carb}`])
+    ])
+  ]);
+
+  const detailWrapper = el('section',{class:'product-detail'},[
+    header,
+    createShareBar({
+      title: product.name,
+      text: product.summary,
+      url: currentPageUrl(),
+      node: container
+    }),
+    gallery,
+    el('div',{class:'product-info-grid'},[ingredients, pairings])
+  ]);
+
+  const recipesSection = el('section',{class:'product-recipes'},[
+    el('h2',{},['Ricette con ', product.name]),
+    el('div',{class:'grid'}, product.recipes.map(recipe => {
+      const card = el('article',{class:'card recipe-card','id':recipe.id},[
+        el('h3',{},[recipe.title]),
+        el('p',{},[recipe.intro]),
+        el('p',{},[el('strong',{},['Ingredienti: ']), recipe.ingredients.join(', ')]),
+        el('ol',{},recipe.steps.map(step => el('li',{},[step])))
+      ]);
+      card.appendChild(createShareBar({
+        title: recipe.title,
+        text: recipe.intro,
+        url: productDetailUrl(product.slug, recipe.id),
+        node: card
+      }));
+      return card;
+    }))
+  ]);
+
+  container.innerHTML = '';
+  container.appendChild(detailWrapper);
+  container.appendChild(recipesSection);
 }
 
 async function renderProductDetail(){
@@ -240,7 +486,15 @@ async function renderProductDetail(){
   const recipesSection = el('section',{class:'product-recipes'},[
     el('h2',{},['Ricette con ', product.name]),
     el('div',{class:'grid'}, product.recipes.map(recipe => {
+      const diffSlug = (recipe.difficulty || '').toLowerCase().replace(/\s+/g,'-');
       const card = el('article',{class:'card recipe-card','id':recipe.id},[
+        el('figure',{class:'recipe-figure'},[
+          el('img',{src:createRecipePlaceholder(recipe.title, accent, recipe.difficulty),alt:`${recipe.title} - piatto finito`},[])
+        ]),
+        el('div',{class:'recipe-meta'},[
+          el('span',{class:`badge difficulty difficulty-${diffSlug}`},[recipe.difficulty]),
+          el('span',{class:'muted'},[categoryName])
+        ]),
         el('h3',{},[recipe.title]),
         el('p',{},[recipe.intro]),
         el('p',{},[el('strong',{},['Ingredienti: ']), recipe.ingredients.join(', ')]),
@@ -248,7 +502,7 @@ async function renderProductDetail(){
       ]);
       card.appendChild(createShareBar({
         title: recipe.title,
-        text: recipe.intro,
+        text: `${product.name} · ${recipe.difficulty}`,
         url: productDetailUrl(product.slug, recipe.id),
         node: card
       }));
@@ -265,34 +519,9 @@ async function renderRecipes(){
   const list = document.getElementById('recipesList');
   if(!list) return;
   const data = await loadProductsData();
-  const recipes = [];
-  data.categories.forEach(category => {
-    category.items.forEach(product => {
-      product.recipes.forEach(recipe => {
-        recipes.push({
-          ...recipe,
-          accentColor: product.accentColor,
-          summary: product.summary
-        });
-      });
-    });
-  });
-  recipes.forEach(recipe => {
-    const card = el('article',{class:'card recipe-card',id:recipe.id},[
-      el('h3',{},[recipe.title]),
-      el('p',{},[recipe.intro]),
-      el('p',{},[el('strong',{},['Prodotto: ']), el('a',{href:productDetailUrl(recipe.productSlug, recipe.id)},[recipe.product])]),
-      el('p',{},[el('strong',{},['Ingredienti: ']), recipe.ingredients.join(', ')]),
-      el('ol',{},recipe.steps.map(step => el('li',{},[step])))
-    ]);
-    card.appendChild(createShareBar({
-      title: recipe.title,
-      text: recipe.intro,
-      url: pageUrlWithHash(recipe.id),
-      node: card
-    }));
-    list.appendChild(card);
-  });
+  buildRecipeIndex(data);
+  setupRecipeFilters(data);
+  renderRecipeCards();
 }
 
 function setupContactForm(){

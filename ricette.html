@@ -31,6 +31,29 @@
           <h1>Ricette Nutrì</h1>
           <p>Trova l’ispirazione con preparazioni veloci e casalinghe. Puoi stamparle o condividerle via email, WhatsApp, Facebook e Instagram.</p>
         </header>
+        <form id="recipeFilters" class="filter-bar" aria-label="Filtra le ricette Nutrì">
+          <label for="recipeTypeFilter">
+            Tipologia prodotto
+            <select id="recipeTypeFilter" name="tipologia">
+              <option value="all">Tutte le tipologie</option>
+            </select>
+          </label>
+          <label for="recipeProductFilter">
+            Prodotto
+            <select id="recipeProductFilter" name="prodotto">
+              <option value="all">Tutti i prodotti</option>
+            </select>
+          </label>
+          <label for="recipeDifficultyFilter">
+            Difficoltà
+            <select id="recipeDifficultyFilter" name="difficolta">
+              <option value="all">Tutte le difficoltà</option>
+              <option value="Semplice">Semplice</option>
+              <option value="Medio">Medio</option>
+              <option value="Cuoco">Cuoco</option>
+            </select>
+          </label>
+        </form>
         <div id="recipesList" class="grid recipe-grid"></div>
       </div>
     </main>
