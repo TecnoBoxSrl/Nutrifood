@@ -2,48 +2,482 @@
   "categories": [
     {
       "name": "Panature",
-      "description": "Panature croccanti e saporite per carne, pesce e verdure.",
+      "description": "Panature croccanti nate per valorizzare carne, pesce e verdure al forno o in padella.",
       "items": [
-        "Panatura Pizzaiola",
-        "Panatura Limone e Prezzemolo",
-        "Panatura Primavera",
-        "Panatura Crispy Bacon",
-        "Panatura Curry",
-        "Panatura Mais Croccante",
-        "Panatura BBQ",
-        "Panatura Semplice",
-        "Panatura Bacon",
-        "Panatura Pepe Rosa e Limone",
-        "Panatura Crispy Pizzaiola",
-        "Panatura Crispy BBQ",
-        "Pangrattato Aglio e Prezzemolo"
+        {
+          "name": "Panatura Pizzaiola",
+          "slug": "panatura-pizzaiola",
+          "summary": "Pomodoro disidratato, origano e formaggio per un gusto autentico da pizzeria.",
+          "accentColor": "#ffb979",
+          "ingredients": [
+            "Pangrattato artigianale",
+            "Pomodoro disidratato",
+            "Origano di Montemaggiore",
+            "Formaggio stagionato",
+            "Sale marino integrale"
+          ],
+          "pairings": {
+            "protein": "Petto di pollo o seitan",
+            "vegetable": "Melanzane grigliate",
+            "carb": "Focaccia soffice"
+          },
+          "recipes": [
+            {
+              "id": "panatura-pizzaiola-forno",
+              "product": "Panatura Pizzaiola",
+              "productSlug": "panatura-pizzaiola",
+              "title": "Pollo al forno con crosta pizzaiola",
+              "intro": "Una cottura al forno che sprigiona profumo di pizza margherita.",
+              "ingredients": [
+                "4 filetti di pollo",
+                "Panatura Pizzaiola",
+                "Olio extravergine",
+                "Sale",
+                "Pepe"
+              ],
+              "steps": [
+                "Tampona la carne e ungi leggermente ogni filetto.",
+                "Passa nella panatura pressando per far aderire il condimento.",
+                "Inforna a 200 °C per 18 minuti finché dorato."
+              ]
+            },
+            {
+              "id": "panatura-pizzaiola-melanzane",
+              "product": "Panatura Pizzaiola",
+              "productSlug": "panatura-pizzaiola",
+              "title": "Melanzane croccanti al forno",
+              "intro": "Verdure dalla panatura croccante e cuore morbido.",
+              "ingredients": [
+                "2 melanzane lunghe",
+                "Panatura Pizzaiola",
+                "Olio extravergine",
+                "Sale",
+                "Semi di sesamo"
+              ],
+              "steps": [
+                "Taglia le melanzane a fette spesse 1 cm.",
+                "Spennella con olio, condisci e passa nella panatura.",
+                "Cuoci a 190 °C per 15 minuti, girando a metà cottura."
+              ]
+            },
+            {
+              "id": "panatura-pizzaiola-bocconcini",
+              "product": "Panatura Pizzaiola",
+              "productSlug": "panatura-pizzaiola",
+              "title": "Bocconcini di tofu pizzaiola",
+              "intro": "Idea vegetariana veloce e saporita.",
+              "ingredients": [
+                "300 g di tofu compatto",
+                "Panatura Pizzaiola",
+                "Olio extravergine",
+                "Capperi",
+                "Basilico fresco"
+              ],
+              "steps": [
+                "Taglia il tofu a cubi e asciugalo bene.",
+                "Passa ogni cubetto nella panatura.",
+                "Salta in padella antiaderente con un filo d'olio per 6 minuti."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Panatura Mediterranea",
+          "slug": "panatura-mediterranea",
+          "summary": "Limone, erbe e granella di mandorle per una finitura profumata.",
+          "accentColor": "#ffd27f",
+          "ingredients": [
+            "Pangrattato artigianale",
+            "Scorza di limone",
+            "Mandorle tritate",
+            "Prezzemolo",
+            "Pepe bianco"
+          ],
+          "pairings": {
+            "protein": "Filetti di orata",
+            "vegetable": "Asparagi",
+            "carb": "Cous cous al limone"
+          },
+          "recipes": [
+            {
+              "id": "panatura-mediterranea-orata",
+              "product": "Panatura Mediterranea",
+              "productSlug": "panatura-mediterranea",
+              "title": "Orata gratinata alle erbe",
+              "intro": "Pesce dal profumo agrumato con crosta croccante.",
+              "ingredients": [
+                "2 orate pulite",
+                "Panatura Mediterranea",
+                "Olio extravergine",
+                "Sale",
+                "Timo"
+              ],
+              "steps": [
+                "Disponi le orate su teglia oliata.",
+                "Copri con la panatura e un filo d'olio.",
+                "Cuoci a 190 °C per 20 minuti."
+              ]
+            },
+            {
+              "id": "panatura-mediterranea-gamberi",
+              "product": "Panatura Mediterranea",
+              "productSlug": "panatura-mediterranea",
+              "title": "Gamberi croccanti al forno",
+              "intro": "Perfetti come antipasto o finger food.",
+              "ingredients": [
+                "400 g di gamberi",
+                "Panatura Mediterranea",
+                "Olio extravergine",
+                "Paprika dolce",
+                "Limone"
+              ],
+              "steps": [
+                "Sguscia i gamberi lasciando la coda.",
+                "Passali nella panatura e disponili su carta forno.",
+                "Cuoci a 210 °C per 8 minuti."
+              ]
+            },
+            {
+              "id": "panatura-mediterranea-verdure",
+              "product": "Panatura Mediterranea",
+              "productSlug": "panatura-mediterranea",
+              "title": "Verdure miste in crosta",
+              "intro": "Contorno rapido con croccantezza leggera.",
+              "ingredients": [
+                "Zucchine",
+                "Peperoni",
+                "Panatura Mediterranea",
+                "Olio extravergine",
+                "Sale"
+              ],
+              "steps": [
+                "Taglia le verdure a bastoncino e passale nella panatura.",
+                "Disponi su teglia e irrora con poco olio.",
+                "Cuoci a 200 °C per 12 minuti."
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "name": "Marinature",
-      "description": "Marinature pronte per ricette ricche e profumate.",
+      "description": "Oli e condimenti pronti a base di erbe e agrumi per carni e pesci.",
       "items": [
-        "Marinatura al Limone",
-        "Marinatura Basilico e Rosmarino",
-        "Marinatura BBQ Affumicato",
-        "Marinatura Arrosto",
-        "Marinatura Curry"
+        {
+          "name": "Marinatura agli Agrumi",
+          "slug": "marinatura-agrumi",
+          "summary": "Limone, arancia e pepe rosa per marinare in modo fresco e aromatico.",
+          "accentColor": "#ff9c72",
+          "ingredients": [
+            "Olio extravergine",
+            "Succo di limone",
+            "Succo di arancia",
+            "Pepe rosa",
+            "Aneto"
+          ],
+          "pairings": {
+            "protein": "Salmone",
+            "vegetable": "Finocchi croccanti",
+            "carb": "Riso basmati"
+          },
+          "recipes": [
+            {
+              "id": "marinatura-agrumi-salmone",
+              "product": "Marinatura agli Agrumi",
+              "productSlug": "marinatura-agrumi",
+              "title": "Tranci di salmone agli agrumi",
+              "intro": "Salmone morbido e profumato senza sforzo.",
+              "ingredients": [
+                "4 tranci di salmone",
+                "Marinatura agli Agrumi",
+                "Sale",
+                "Zeste di limone",
+                "Prezzemolo"
+              ],
+              "steps": [
+                "Copri i tranci con la marinatura e lascia riposare 20 minuti.",
+                "Cuoci in padella antiaderente 3 minuti per lato.",
+                "Servi con zeste e prezzemolo fresco."
+              ]
+            },
+            {
+              "id": "marinatura-agrumi-pollo",
+              "product": "Marinatura agli Agrumi",
+              "productSlug": "marinatura-agrumi",
+              "title": "Pollo glassato all'arancia",
+              "intro": "Secondo piatto brillante e agrumato.",
+              "ingredients": [
+                "500 g di sovracosce di pollo",
+                "Marinatura agli Agrumi",
+                "Miele",
+                "Rosmarino",
+                "Sale"
+              ],
+              "steps": [
+                "Marina il pollo per almeno 30 minuti.",
+                "Rosola in padella con poco olio.",
+                "Sfuma con marinata e miele fino a glassatura."
+              ]
+            },
+            {
+              "id": "marinatura-agrumi-tofu",
+              "product": "Marinatura agli Agrumi",
+              "productSlug": "marinatura-agrumi",
+              "title": "Tofu marinato agrumato",
+              "intro": "Versione veg perfetta per insalate o bowl.",
+              "ingredients": [
+                "300 g di tofu",
+                "Marinatura agli Agrumi",
+                "Semi di sesamo",
+                "Cipollotto",
+                "Riso integrale"
+              ],
+              "steps": [
+                "Asciuga il tofu e taglialo a cubi.",
+                "Marina per 25 minuti e salta con semi di sesamo.",
+                "Completa con cipollotto fresco e servi con riso."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Marinatura alle Erbe",
+          "slug": "marinatura-erbe",
+          "summary": "Rosmarino, salvia e timo con note di aglio dolce per carni bianche e verdure.",
+          "accentColor": "#9adf90",
+          "ingredients": [
+            "Olio extravergine",
+            "Rosmarino",
+            "Salvia",
+            "Timo",
+            "Aglio dolce"
+          ],
+          "pairings": {
+            "protein": "Lonza di maiale",
+            "vegetable": "Patate novelle",
+            "carb": "Pane rustico"
+          },
+          "recipes": [
+            {
+              "id": "marinatura-erbe-lonza",
+              "product": "Marinatura alle Erbe",
+              "productSlug": "marinatura-erbe",
+              "title": "Lonza alle erbe mediterranee",
+              "intro": "Carne morbida con sentori di campagna siciliana.",
+              "ingredients": [
+                "800 g di lonza",
+                "Marinatura alle Erbe",
+                "Pepe nero",
+                "Sale",
+                "Alloro"
+              ],
+              "steps": [
+                "Marina la carne per almeno 1 ora.",
+                "Rosola in casseruola e sfuma con la marinatura.",
+                "Completa la cottura in forno per 20 minuti."
+              ]
+            },
+            {
+              "id": "marinatura-erbe-verdure",
+              "product": "Marinatura alle Erbe",
+              "productSlug": "marinatura-erbe",
+              "title": "Verdure grigliate alle erbe",
+              "intro": "Perfette per buffet o panini gourmet.",
+              "ingredients": [
+                "Zucchine",
+                "Peperoni",
+                "Marinatura alle Erbe",
+                "Origano fresco",
+                "Sale"
+              ],
+              "steps": [
+                "Marina le verdure tagliate a falde per 20 minuti.",
+                "Griglia su piastra rovente finché segnate.",
+                "Condisci con un filo di marinatura a crudo."
+              ]
+            },
+            {
+              "id": "marinatura-erbe-spiedini",
+              "product": "Marinatura alle Erbe",
+              "productSlug": "marinatura-erbe",
+              "title": "Spiedini di tacchino alle erbe",
+              "intro": "Secondo leggero e saporito pronto in pochi minuti.",
+              "ingredients": [
+                "Petto di tacchino",
+                "Marinatura alle Erbe",
+                "Foglie di alloro",
+                "Paprika",
+                "Limone"
+              ],
+              "steps": [
+                "Taglia il tacchino a cubi e marina 30 minuti.",
+                "Infilza con alloro e paprika.",
+                "Griglia o cuoci in forno a 200 °C per 12 minuti."
+              ]
+            }
+          ]
+        }
       ]
     },
     {
-      "name": "Aromi",
-      "description": "Aromi per arrosti e preparazioni di pasta.",
+      "name": "Aromi e Pesti",
+      "description": "Condimenti concentrati per completare piatti caldi o freddi con identità siciliana.",
       "items": [
-        "Aromi per arrosto",
-        "Spaghettata aglio, olio e prezzemolo",
-        "Fiori eduli per cucina"
-      ]
-    },
-    {
-      "name": "Pesto",
-      "description": "Pesto di pistacchio cremoso.",
-      "items": [
-        "Pesto di pistacchio cremoso"
+        {
+          "name": "Mix Aromatico Arrosto",
+          "slug": "mix-arrosto",
+          "summary": "Sale di Trapani, aglio dolce e spezie per arrosti e patate.",
+          "accentColor": "#c6a0ff",
+          "ingredients": [
+            "Sale integrale",
+            "Aglio dolce",
+            "Rosmarino",
+            "Alloro",
+            "Pepe nero"
+          ],
+          "pairings": {
+            "protein": "Arrosti di maiale",
+            "vegetable": "Patate al forno",
+            "carb": "Focaccia alle erbe"
+          },
+          "recipes": [
+            {
+              "id": "mix-arrosto-patate",
+              "product": "Mix Aromatico Arrosto",
+              "productSlug": "mix-arrosto",
+              "title": "Patate al forno aromatiche",
+              "intro": "Contorno saporito dalla crosta dorata.",
+              "ingredients": [
+                "1 kg di patate novelle",
+                "Mix Aromatico Arrosto",
+                "Olio extravergine",
+                "Sale",
+                "Rosmarino"
+              ],
+              "steps": [
+                "Sbollenta le patate per 5 minuti.",
+                "Condisci con olio e mix aromatico.",
+                "Cuoci a 200 °C per 30 minuti finché croccanti."
+              ]
+            },
+            {
+              "id": "mix-arrosto-lonza",
+              "product": "Mix Aromatico Arrosto",
+              "productSlug": "mix-arrosto",
+              "title": "Lonza arrotolata alle erbe",
+              "intro": "Arrosto profumato pronto da affettare.",
+              "ingredients": [
+                "800 g di lonza",
+                "Mix Aromatico Arrosto",
+                "Olio extravergine",
+                "Vino bianco",
+                "Salvia"
+              ],
+              "steps": [
+                "Massaggia la carne con il mix.",
+                "Rosola in casseruola e sfuma con vino.",
+                "Cuoci coperto 35 minuti girando a metà."
+              ]
+            },
+            {
+              "id": "mix-arrosto-popcorn",
+              "product": "Mix Aromatico Arrosto",
+              "productSlug": "mix-arrosto",
+              "title": "Popcorn salato alle erbe",
+              "intro": "Snack veloce per aperitivo casalingo.",
+              "ingredients": [
+                "Mais per popcorn",
+                "Mix Aromatico Arrosto",
+                "Olio di semi",
+                "Burro chiarificato",
+                "Peperoncino"
+              ],
+              "steps": [
+                "Scoppia il mais con poco olio.",
+                "Condisci subito con burro fuso e mix.",
+                "Aggiungi peperoncino a piacere e servi caldo."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Pesto di Pistacchio Cremoso",
+          "slug": "pesto-pistacchio",
+          "summary": "Pistacchio di Bronte DOP e olio extravergine siciliano.",
+          "accentColor": "#7dd9c6",
+          "ingredients": [
+            "Pistacchio di Bronte",
+            "Olio extravergine",
+            "Grana siciliano",
+            "Basilico",
+            "Sale"
+          ],
+          "pairings": {
+            "protein": "Straccetti di pollo",
+            "vegetable": "Zucchine alla griglia",
+            "carb": "Busiate fresche"
+          },
+          "recipes": [
+            {
+              "id": "pesto-pistacchio-busiate",
+              "product": "Pesto di Pistacchio Cremoso",
+              "productSlug": "pesto-pistacchio",
+              "title": "Busiate al pesto di pistacchio",
+              "intro": "Primo piatto cremoso tipico della tradizione siciliana.",
+              "ingredients": [
+                "400 g di busiate",
+                "Pesto di Pistacchio Cremoso",
+                "Ricotta salata",
+                "Granella di pistacchio",
+                "Pepe"
+              ],
+              "steps": [
+                "Cuoci le busiate in abbondante acqua salata.",
+                "Diluisci il pesto con poca acqua di cottura.",
+                "Condisci e completa con ricotta salata e granella."
+              ]
+            },
+            {
+              "id": "pesto-pistacchio-spiedini",
+              "product": "Pesto di Pistacchio Cremoso",
+              "productSlug": "pesto-pistacchio",
+              "title": "Spiedini di pollo al pistacchio",
+              "intro": "Secondo piatto morbido con nota siciliana.",
+              "ingredients": [
+                "Petto di pollo",
+                "Pesto di Pistacchio Cremoso",
+                "Pistacchi tritati",
+                "Olio extravergine",
+                "Limone"
+              ],
+              "steps": [
+                "Taglia il pollo a bocconcini e condisci con il pesto.",
+                "Infilza negli spiedini e passa nella granella.",
+                "Cuoci su piastra calda per 8 minuti girando spesso."
+              ]
+            },
+            {
+              "id": "pesto-pistacchio-bruschette",
+              "product": "Pesto di Pistacchio Cremoso",
+              "productSlug": "pesto-pistacchio",
+              "title": "Bruschette pistacchio e burrata",
+              "intro": "Antipasto raffinato pronto in pochi minuti.",
+              "ingredients": [
+                "Fette di pane",
+                "Pesto di Pistacchio Cremoso",
+                "Burrata",
+                "Pomodorini",
+                "Basilico"
+              ],
+              "steps": [
+                "Tosta le fette di pane e spalmaci il pesto.",
+                "Aggiungi burrata a straccetti e pomodorini.",
+                "Completa con basilico fresco e pepe."
+              ]
+            }
+          ]
+        }
       ]
     }
   ]
