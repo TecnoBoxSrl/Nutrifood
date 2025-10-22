@@ -515,6 +515,111 @@ async function renderProductDetail(){
   container.appendChild(recipesSection);
 }
 
+async function renderProductDetail(){
+  const container = document.getElementById('productDetail');
+  if(!container) return;
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('slug');
+  if(!slug){
+    container.innerHTML = '<p class="muted">Seleziona un prodotto dalla pagina prodotti.</p>';
+    return;
+  }
+  const data = await loadProductsData();
+  let product = null;
+  let categoryName = '';
+  data.categories.some(category => {
+    const found = category.items.find(item => item.slug === slug);
+    if(found){
+      product = found;
+      categoryName = category.name;
+      return true;
+    }
+    return false;
+  });
+  if(!product){
+    container.innerHTML = `<div class="card"><h1>Prodotto non trovato</h1><p>Il prodotto richiesto non è presente. Torna ai <a href="prodotti.html">prodotti Nutrì</a>.</p></div>`;
+    return;
+  }
+  const accent = product.accentColor || '#ffb979';
+  const packagingImage = createImagePlaceholder(product.name, 'packaging', accent);
+  const preparedImage = createImagePlaceholder(product.name, 'prepared', accent);
+  const navProduct = document.querySelector('.nav a[href="prodotti.html"]');
+  if(navProduct) navProduct.setAttribute('aria-current','page');
+  const header = el('header',{class:'page-header product-header'},[
+    el('p',{class:'breadcrumb'},[el('a',{href:'prodotti.html'},['Prodotti']), ' / ', categoryName]),
+    el('h1',{},[product.name]),
+    el('p',{},[product.summary])
+  ]);
+
+  const gallery = el('div',{class:'product-gallery'},[
+    el('figure',{class:'card'},[
+      el('img',{src:packagingImage,alt:`Confezione ${product.name}`},[]),
+      el('figcaption',{},['Confezione'])
+    ]),
+    el('figure',{class:'card'},[
+      el('img',{src:preparedImage,alt:`${product.name} pronto da gustare`},[]),
+      el('figcaption',{},['Servizio suggerito'])
+    ])
+  ]);
+
+  const ingredients = el('div',{class:'card'},[
+    el('h2',{},['Ingredienti base']),
+    el('ul',{},product.ingredients.map(item=> el('li',{},[item])))
+  ]);
+
+  const pairings = el('div',{class:'card'},[
+    el('h2',{},['Abbinamenti consigliati']),
+    el('ul',{},[
+      el('li',{},[`Proteina: ${product.pairings.protein}`]),
+      el('li',{},[`Verdura: ${product.pairings.vegetable}`]),
+      el('li',{},[`Carboidrato: ${product.pairings.carb}`])
+    ])
+  ]);
+
+  const detailWrapper = el('section',{class:'product-detail'},[
+    header,
+    createShareBar({
+      title: product.name,
+      text: product.summary,
+      url: currentPageUrl(),
+      node: container
+    }),
+    gallery,
+    el('div',{class:'product-info-grid'},[ingredients, pairings])
+  ]);
+
+  const recipesSection = el('section',{class:'product-recipes'},[
+    el('h2',{},['Ricette con ', product.name]),
+    el('div',{class:'grid'}, product.recipes.map(recipe => {
+      const diffSlug = (recipe.difficulty || '').toLowerCase().replace(/\s+/g,'-');
+      const card = el('article',{class:'card recipe-card','id':recipe.id},[
+        el('figure',{class:'recipe-figure'},[
+          el('img',{src:createRecipePlaceholder(recipe.title, accent, recipe.difficulty),alt:`${recipe.title} - piatto finito`},[])
+        ]),
+        el('div',{class:'recipe-meta'},[
+          el('span',{class:`badge difficulty difficulty-${diffSlug}`},[recipe.difficulty]),
+          el('span',{class:'muted'},[categoryName])
+        ]),
+        el('h3',{},[recipe.title]),
+        el('p',{},[recipe.intro]),
+        el('p',{},[el('strong',{},['Ingredienti: ']), recipe.ingredients.join(', ')]),
+        el('ol',{},recipe.steps.map(step => el('li',{},[step])))
+      ]);
+      card.appendChild(createShareBar({
+        title: recipe.title,
+        text: `${product.name} · ${recipe.difficulty}`,
+        url: productDetailUrl(product.slug, recipe.id),
+        node: card
+      }));
+      return card;
+    }))
+  ]);
+
+  container.innerHTML = '';
+  container.appendChild(detailWrapper);
+  container.appendChild(recipesSection);
+}
+
 async function renderRecipes(){
   const list = document.getElementById('recipesList');
   if(!list) return;
