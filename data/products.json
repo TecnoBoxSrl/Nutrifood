@@ -2,7 +2,7 @@
   "categories": [
     {
       "name": "Panature",
-      "description": "Panature croccanti e saporite per carne, pesce e verdure.",
+      "description": "Panature croccanti e aromatiche pensate per carne, pesce e verdure.",
       "items": [
         {
           "name": "Panatura Pizzaiola",
@@ -1048,7 +1048,7 @@
     },
     {
       "name": "Marinature",
-      "description": "Marinature pronte per ricette ricche e profumate.",
+      "description": "Bagni aromatici per insaporire e intenerire prima della cottura.",
       "items": [
         {
           "name": "Marinatura al Limone",
@@ -1454,7 +1454,7 @@
     },
     {
       "name": "Aromi",
-      "description": "Aromi per arrosti e preparazioni di pasta.",
+      "description": "Mix secchi per rub, condimenti e finiture aromatiche.",
       "items": [
         {
           "name": "Aromi per arrosto",
@@ -1700,7 +1700,7 @@
     },
     {
       "name": "Pesto",
-      "description": "Pesto di pistacchio cremoso.",
+      "description": "Condimenti cremosi pronti all'uso con materie prime siciliane.",
       "items": [
         {
           "name": "Pesto di pistacchio cremoso",
