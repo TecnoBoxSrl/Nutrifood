@@ -8,4 +8,4 @@ CNAME: `www` → `<user>.github.io.`
 ## 3) HTTPS
 Settings → Pages → Enforce HTTPS.
 ## 4) Contenuti
-Modifica `data/products.json` e `data/recipes.json` per aggiornare prodotti e ricette.
+ Modifica `data/products.json` per aggiornare prodotti e ricette.
