@@ -118,8 +118,8 @@ a:hover{color:var(--accent-strong)}
 
 .page-header h1{margin:0 0 12px;color:#f3e0c6}
 
-.page-header p{margin:0;color:var(--body-text)}
 
+.page-header p{margin:0;color:var(--body-text)}
 footer{border-top:1px solid rgba(0,0,0,.35);margin-top:40px;padding:24px 0;background:#2c1810;color:#f3e0c6}
 
 footer p{margin:6px 0;color:#f3e0c6}
