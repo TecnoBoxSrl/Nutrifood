@@ -2,9 +2,10 @@
   --bg:#3a2314;
   --bg-accent:#4a2c19;
   --surface:#4a2c19;
-  --surface-alt:#3f2616;
+  --surface-alt:#3a2314;
   --text:#faf3e5;
-  --body-text:#faf3e5cc;
+  --body-text:#faf3e5;
+  --text-soft:#faf3e5cc;
   --muted:#e9d8bd;
   --accent:#d95c29;
   --accent-strong:#e9733f;
@@ -21,7 +22,7 @@ html,body{
   padding:0;
   min-height:100%;
   background:linear-gradient(180deg,#3a2314 0%,#4a2c19 100%);
-  color:var(--body-text);
+  color:var(--text);
   font-family:"Inter","Poppins",sans-serif;
   line-height:1.5;
 }
@@ -78,7 +79,7 @@ a:hover{color:var(--accent-strong)}
 
 .hero h1{font-size:clamp(30px,4vw,52px);line-height:1.05;margin:0 0 16px;color:#f3e0c6}
 
-.hero p{margin:0 0 18px;color:var(--body-text)}
+.hero p{margin:0 0 18px;color:var(--text-soft)}
 
 .hero p strong{color:var(--accent-strong)}
 
@@ -108,18 +109,20 @@ a:hover{color:var(--accent-strong)}
 
 .card{border:1px solid rgba(0,0,0,.35);border-radius:10px;padding:24px;background:var(--surface);box-shadow:var(--shadow);color:var(--text);transition:background .3s ease,transform .3s ease}
 
-.card:hover{background:#56341f;transform:translateY(-2px)}
+.card:hover{background:#55331f;transform:translateY(-2px)}
 
 .card h2,.card h3{margin:.2rem 0 .75rem;color:#f3e0c6;letter-spacing:.2px}
 
-.card p,.card span,.card li,.card .muted{color:var(--body-text)}
+.card p,.card span,.card li{color:var(--body-text)}
+
+.card .muted{color:var(--text-soft)}
 
 .page-header{margin-bottom:28px}
 
 .page-header h1{margin:0 0 12px;color:#f3e0c6}
 
-
 .page-header p{margin:0;color:var(--body-text)}
+
 footer{border-top:1px solid rgba(0,0,0,.35);margin-top:40px;padding:24px 0;background:#2c1810;color:#f3e0c6}
 
 footer p{margin:6px 0;color:#f3e0c6}
@@ -128,7 +131,7 @@ footer a{color:var(--accent)}
 
 footer a:hover{color:var(--accent-strong)}
 
-.badge{display:inline-block;font-size:.78rem;background:#3a2314;border:1px solid var(--accent-secondary);color:#faf3e5;font-weight:700;padding:6px 14px;border-radius:999px;margin:0 6px 6px 0;letter-spacing:.3px}
+.badge{display:inline-block;font-size:.78rem;background:#3a2314;border:1px solid var(--accent-secondary);color:var(--text);font-weight:700;padding:6px 14px;border-radius:999px;margin:0 6px 6px 0;letter-spacing:.3px}
 
 .section{padding:34px 0}
 
@@ -138,7 +141,7 @@ footer a:hover{color:var(--accent-strong)}
 
 .section p{color:var(--body-text)}
 
-small.muted,.muted{color:var(--body-text)}
+small.muted,.muted{color:var(--text-soft)}
 
 .product-grid .card{display:flex;flex-direction:column;gap:16px}
 
@@ -156,7 +159,7 @@ small.muted,.muted{color:var(--body-text)}
 
 .product-header{margin-bottom:0}
 
-.product-header .breadcrumb{margin:0 0 6px;color:var(--body-text);font-size:.85rem}
+.product-header .breadcrumb{margin:0 0 6px;color:var(--text-soft);font-size:.85rem}
 
 .product-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
 
@@ -182,7 +185,7 @@ small.muted,.muted{color:var(--body-text)}
 
 .recipe-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px;color:var(--body-text)}
 
-.recipe-meta .muted{font-size:.82rem;color:var(--body-text)}
+.recipe-meta .muted{font-size:.82rem;color:var(--text-soft)}
 
 .recipe-meta-link{font-size:.85rem;color:var(--accent)}
 
@@ -196,7 +199,7 @@ small.muted,.muted{color:var(--body-text)}
 
 .filter-bar{display:flex;flex-wrap:wrap;gap:16px;margin:0 0 26px}
 
-.filter-bar label{display:flex;flex-direction:column;gap:6px;font-size:.78rem;color:var(--body-text)}
+.filter-bar label{display:flex;flex-direction:column;gap:6px;font-size:.78rem;color:var(--text-soft)}
 
 .filter-bar select{background:var(--surface);border:1px solid rgba(0,0,0,.35);border-radius:12px;padding:10px 14px;color:var(--text);min-width:180px;font-size:.95rem}
 
@@ -222,7 +225,7 @@ small.muted,.muted{color:var(--body-text)}
 
 .contact-form{display:flex;flex-direction:column;gap:12px}
 
-.contact-form label{font-size:.85rem;color:var(--body-text)}
+.contact-form label{font-size:.85rem;color:var(--text-soft)}
 
 .contact-form input,.contact-form textarea{background:var(--surface-alt);border:1px solid rgba(0,0,0,.35);border-radius:12px;padding:12px 14px;color:var(--text);font-size:1rem}
 
