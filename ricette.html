@@ -1,16 +1,70 @@
-<!doctype html><html lang="it"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ricette | Nutri‑Food</title><link rel="stylesheet" href="styles/style.css">
-</head><body>
-<header class="header"><div class="container wrap">
-<div class="brand">NUTRI‑FOOD</div>
-<nav class="nav"><a href="index.html">Home</a><a href="prodotti.html">Prodotti</a><a href="ricette.html">Ricette</a></nav>
-</div></header>
-<section class="section"><div class="container">
-<h1 style="color:var(--accent);margin:0 0 12px 0;">Ricette</h1>
-<p>3 ricette casalinghe per ogni prodotto: semplici, veloci e con ingredienti comuni.</p>
-<div id="recipesList" class="grid"></div>
-</div></section>
-<footer><div class="container"><p>📧 <a href="mailto:info@nutri-food.it">info@nutri-food.it</a></p></div></footer>
-<script src="scripts/app.js"></script><script>renderRecipes();</script>
-</body></html>
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ricette | Nutri‑Food</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" data-logo="nutri" href="https://tecnoboxsrl.github.io/Nutrifood/assets/nutri.png" type="image/png">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container wrap">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" data-logo="nutri" src="https://tecnoboxsrl.github.io/Nutrifood/assets/nutri.png" alt="Logo Nutrì">
+          <span>Nutri‑Food</span>
+        </a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="chi-siamo.html">Chi Siamo</a>
+          <a href="prodotti.html">Prodotti</a>
+          <a href="ricette.html" aria-current="page">Ricette</a>
+          <a href="nutri-box.html">Nutrì Box</a>
+          <a href="contatti.html">Contatti</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <header class="page-header">
+          <h1>Ricette Nutrì</h1>
+          <p>Trova l’ispirazione con preparazioni veloci e casalinghe. Puoi stamparle o condividerle via email, WhatsApp, Facebook e Instagram.</p>
+        </header>
+        <form id="recipeFilters" class="filter-bar" aria-label="Filtra le ricette Nutrì">
+          <label for="recipeTypeFilter">
+            Tipologia prodotto
+            <select id="recipeTypeFilter" name="tipologia">
+              <option value="all">Tutte le tipologie</option>
+            </select>
+          </label>
+          <label for="recipeProductFilter">
+            Prodotto
+            <select id="recipeProductFilter" name="prodotto">
+              <option value="all">Tutti i prodotti</option>
+            </select>
+          </label>
+          <label for="recipeDifficultyFilter">
+            Difficoltà
+            <select id="recipeDifficultyFilter" name="difficolta">
+              <option value="all">Tutte le difficoltà</option>
+              <option value="Semplice">Semplice</option>
+              <option value="Medio">Medio</option>
+              <option value="Cuoco">Cuoco</option>
+            </select>
+          </label>
+        </form>
+        <div id="recipesList" class="grid recipe-grid"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p><strong>Nutrì Food Lab</strong> · Via Libertà 128 · Palermo</p>
+        <p>📧 <a href="mailto:info@nutri-food.it">info@nutri-food.it</a> · ☎️ +39 091 600 1234</p>
+      </div>
+    </footer>
+
+    <script src="scripts/app.js" defer></script>
+  </body>
+</html>
