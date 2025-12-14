@@ -4,46 +4,1784 @@
       "name": "Panature",
       "description": "Panature croccanti e saporite per carne, pesce e verdure.",
       "items": [
-        "Panatura Pizzaiola",
-        "Panatura Limone e Prezzemolo",
-        "Panatura Primavera",
-        "Panatura Crispy Bacon",
-        "Panatura Curry",
-        "Panatura Mais Croccante",
-        "Panatura BBQ",
-        "Panatura Semplice",
-        "Panatura Bacon",
-        "Panatura Pepe Rosa e Limone",
-        "Panatura Crispy Pizzaiola",
-        "Panatura Crispy BBQ",
-        "Pangrattato Aglio e Prezzemolo"
+        {
+          "name": "Panatura Pizzaiola",
+          "slug": "panatura-pizzaiola",
+          "summary": "Pomodoro disidratato, origano e formaggio per un gusto autentico da pizzeria.",
+          "accentColor": "#ffb979",
+          "ingredients": [
+            "Pangrattato artigianale",
+            "Pomodoro disidratato",
+            "Origano di Montemaggiore",
+            "Formaggio stagionato",
+            "Sale marino integrale"
+          ],
+          "pairings": {
+            "protein": "Petto di pollo o seitan",
+            "vegetable": "Melanzane grigliate",
+            "carb": "Focaccia soffice"
+          },
+          "recipes": [
+            {
+              "id": "panatura-pizzaiola-pollo-forno",
+              "product": "Panatura Pizzaiola",
+              "productSlug": "panatura-pizzaiola",
+              "title": "Pollo al forno con crosta pizzaiola",
+              "intro": "Una cottura al forno che sprigiona profumo di pizza margherita.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "4 filetti di pollo",
+                "Panatura Pizzaiola",
+                "Olio extravergine",
+                "Sale",
+                "Pepe"
+              ],
+              "steps": [
+                "Tampona la carne e ungi leggermente ogni filetto.",
+                "Passa nella panatura pressando per far aderire il condimento.",
+                "Inforna a 200 °C per 18 minuti finché dorato."
+              ]
+            },
+            {
+              "id": "panatura-pizzaiola-melanzane",
+              "product": "Panatura Pizzaiola",
+              "productSlug": "panatura-pizzaiola",
+              "title": "Melanzane croccanti al forno",
+              "intro": "Verdure dalla panatura croccante e cuore morbido.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "2 melanzane lunghe",
+                "Panatura Pizzaiola",
+                "Olio extravergine",
+                "Sale",
+                "Semi di sesamo"
+              ],
+              "steps": [
+                "Taglia le melanzane a fette spesse 1 cm.",
+                "Spennella con olio, condisci e passa nella panatura.",
+                "Cuoci a 190 °C per 15 minuti, girando a metà cottura."
+              ]
+            },
+            {
+              "id": "panatura-pizzaiola-bocconcini",
+              "product": "Panatura Pizzaiola",
+              "productSlug": "panatura-pizzaiola",
+              "title": "Bocconcini di tofu pizzaiola",
+              "intro": "Idea vegetariana veloce e saporita.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "300 g di tofu compatto",
+                "Panatura Pizzaiola",
+                "Olio extravergine",
+                "Capperi",
+                "Basilico fresco"
+              ],
+              "steps": [
+                "Taglia il tofu a cubi e asciugalo bene.",
+                "Passa ogni cubetto nella panatura.",
+                "Salta in padella antiaderente con un filo d'olio per 6 minuti."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Panatura Limone e Prezzemolo",
+          "slug": "panatura-limone-prezzemolo",
+          "summary": "Freschezza agrumata ed erbacea per piatti leggeri e profumati.",
+          "accentColor": "#ffe08a",
+          "ingredients": [
+            "Pangrattato artigianale",
+            "Scorza di limone",
+            "Prezzemolo disidratato",
+            "Olio extravergine in polvere",
+            "Sale marino"
+          ],
+          "pairings": {
+            "protein": "Filetti di merluzzo",
+            "vegetable": "Zucchine trifolate",
+            "carb": "Riso basmati al limone"
+          },
+          "recipes": [
+            {
+              "id": "panatura-limone-prezzemolo-merluzzo",
+              "product": "Panatura Limone e Prezzemolo",
+              "productSlug": "panatura-limone-prezzemolo",
+              "title": "Merluzzo al forno al profumo di limone",
+              "intro": "Filetti morbidi con crosta agrumata pronta in pochi minuti.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "4 filetti di merluzzo",
+                "Panatura Limone e Prezzemolo",
+                "Olio extravergine",
+                "Sale",
+                "Fettine di limone"
+              ],
+              "steps": [
+                "Disponi il merluzzo su teglia rivestita di carta forno.",
+                "Condisci con olio, sale e copri con la panatura.",
+                "Cuoci a 190 °C per 12 minuti e servi con limone fresco."
+              ]
+            },
+            {
+              "id": "panatura-limone-prezzemolo-asparagi",
+              "product": "Panatura Limone e Prezzemolo",
+              "productSlug": "panatura-limone-prezzemolo",
+              "title": "Asparagi croccanti al forno",
+              "intro": "Verdure di stagione con copertura profumata alle erbe.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "1 mazzo di asparagi",
+                "Panatura Limone e Prezzemolo",
+                "Olio extravergine",
+                "Parmigiano grattugiato",
+                "Scorza di limone"
+              ],
+              "steps": [
+                "Sbollenta gli asparagi per 2 minuti e scolali.",
+                "Disponili in teglia, condiscili con olio e spolvera panatura e parmigiano.",
+                "Gratina a 200 °C per 8 minuti fino a doratura."
+              ]
+            },
+            {
+              "id": "panatura-limone-prezzemolo-involtini",
+              "product": "Panatura Limone e Prezzemolo",
+              "productSlug": "panatura-limone-prezzemolo",
+              "title": "Involtini di pollo e zucchine",
+              "intro": "Rotolini ripieni con esterno croccante e agrumato.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "4 fettine di petto di pollo",
+                "1 zucchina",
+                "Panatura Limone e Prezzemolo",
+                "Ricotta fresca",
+                "Basilico"
+              ],
+              "steps": [
+                "Spalma la ricotta sulle fettine e aggiungi listarelle di zucchina.",
+                "Arrotola, ferma con stecchini e passa nella panatura.",
+                "Cuoci in padella con poco olio per 10 minuti girando spesso."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Panatura Primavera",
+          "slug": "panatura-primavera",
+          "summary": "Erbe delicate, semi e petali per una crosta fragrante e colorata.",
+          "accentColor": "#f4c4a3",
+          "ingredients": [
+            "Pangrattato artigianale",
+            "Erbe aromatiche di campo",
+            "Semi di girasole tostati",
+            "Petali essiccati",
+            "Sale dolce di Trapani"
+          ],
+          "pairings": {
+            "protein": "Fesa di tacchino",
+            "vegetable": "Verdure primaverili saltate",
+            "carb": "Quinoa alle erbe"
+          },
+          "recipes": [
+            {
+              "id": "panatura-primavera-polpette",
+              "product": "Panatura Primavera",
+              "productSlug": "panatura-primavera",
+              "title": "Polpette di tacchino primaverili",
+              "intro": "Bocconi morbidi con crosta leggermente croccante e profumata.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "400 g di carne di tacchino macinata",
+                "Panatura Primavera",
+                "1 uovo",
+                "Latte",
+                "Sale e pepe"
+              ],
+              "steps": [
+                "Amalgama la carne con uovo, sale e pepe.",
+                "Forma polpette e passale nella panatura.",
+                "Inforna a 190 °C per 18 minuti girando a metà cottura."
+              ]
+            },
+            {
+              "id": "panatura-primavera-verdure",
+              "product": "Panatura Primavera",
+              "productSlug": "panatura-primavera",
+              "title": "Verdure croccanti di stagione",
+              "intro": "Un contorno colorato con punte croccanti e profumi floreali.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "Carote novelle",
+                "Fagiolini",
+                "Panatura Primavera",
+                "Olio extravergine",
+                "Semi di sesamo"
+              ],
+              "steps": [
+                "Sbollenta le verdure per pochi minuti.",
+                "Passale in padella con olio e cospargi di panatura.",
+                "Salta a fuoco vivace finché diventano dorate."
+              ]
+            },
+            {
+              "id": "panatura-primavera-salmone",
+              "product": "Panatura Primavera",
+              "productSlug": "panatura-primavera",
+              "title": "Salmone in crosta primavera",
+              "intro": "Filetti di salmone dal cuore tenero e crosta agli aromi.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "4 tranci di salmone",
+                "Panatura Primavera",
+                "Senape dolce",
+                "Miele di zagara",
+                "Aneto"
+              ],
+              "steps": [
+                "Spennella il salmone con senape e miele.",
+                "Premi la superficie nella panatura per far aderire il mix.",
+                "Cuoci a 200 °C per 10 minuti e completa con aneto fresco."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Panatura Crispy Bacon",
+          "slug": "panatura-crispy-bacon",
+          "summary": "Granella croccante con bacon affumicato per un sapore deciso.",
+          "accentColor": "#f5a36c",
+          "ingredients": [
+            "Pangrattato",
+            "Bacon croccante essiccato",
+            "Paprika affumicata",
+            "Parmigiano",
+            "Pepe nero"
+          ],
+          "pairings": {
+            "protein": "Sovracosce di pollo",
+            "vegetable": "Patate al forno",
+            "carb": "Pane rustico"
+          },
+          "recipes": [
+            {
+              "id": "panatura-crispy-bacon-bastoncini",
+              "product": "Panatura Crispy Bacon",
+              "productSlug": "panatura-crispy-bacon",
+              "title": "Bastoncini di pollo crispy bacon",
+              "intro": "Croccantezza irresistibile con cuore succoso.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "500 g di petto di pollo a strisce",
+                "Panatura Crispy Bacon",
+                "Farina",
+                "Uova",
+                "Olio di arachidi"
+              ],
+              "steps": [
+                "Passa il pollo in farina, uovo e panatura.",
+                "Friggi in olio caldo a 170 °C per 5 minuti.",
+                "Scola su carta e sala leggermente."
+              ]
+            },
+            {
+              "id": "panatura-crispy-bacon-patate",
+              "product": "Panatura Crispy Bacon",
+              "productSlug": "panatura-crispy-bacon",
+              "title": "Patate ripiene al bacon",
+              "intro": "Patate morbide con topping croccante e saporito.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "4 patate grandi",
+                "Panatura Crispy Bacon",
+                "Panna acida",
+                "Erba cipollina",
+                "Provola dolce"
+              ],
+              "steps": [
+                "Cuoci le patate intere al forno finché tenere.",
+                "Svuota leggermente l'interno e farcisci con provola e panna acida.",
+                "Cospargi di panatura e gratina 8 minuti a 200 °C."
+              ]
+            },
+            {
+              "id": "panatura-crispy-bacon-burger",
+              "product": "Panatura Crispy Bacon",
+              "productSlug": "panatura-crispy-bacon",
+              "title": "Burger gourmet di manzo",
+              "intro": "Hamburger con copertura croccante e cuore rosato.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "4 burger di manzo",
+                "Panatura Crispy Bacon",
+                "Senape",
+                "Insalata iceberg",
+                "Pane per burger"
+              ],
+              "steps": [
+                "Spennella ogni burger con un velo di senape.",
+                "Passa nella panatura solo la superficie superiore.",
+                "Cuoci sulla piastra con coperchio per 6 minuti mantenendo la crosta asciutta."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Panatura Curry",
+          "slug": "panatura-curry",
+          "summary": "Spezie dorate e profumo orientale per piatti dal carattere deciso.",
+          "accentColor": "#f7c35f",
+          "ingredients": [
+            "Pangrattato",
+            "Mix di curry dolce",
+            "Curcuma",
+            "Semi di coriandolo",
+            "Sale affumicato"
+          ],
+          "pairings": {
+            "protein": "Filetti di salmone",
+            "vegetable": "Cavolfiore arrosto",
+            "carb": "Riso jasmine"
+          },
+          "recipes": [
+            {
+              "id": "panatura-curry-bastoncini",
+              "product": "Panatura Curry",
+              "productSlug": "panatura-curry",
+              "title": "Bastoncini di pesce al curry",
+              "intro": "Crocchette leggere con nota speziata e dorata.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "400 g di filetti di merluzzo",
+                "Panatura Curry",
+                "Farina di riso",
+                "Olio extravergine",
+                "Sale"
+              ],
+              "steps": [
+                "Taglia il merluzzo a listarelle e asciugalo.",
+                "Passalo in farina e poi nella panatura.",
+                "Cuoci in forno ventilato a 200 °C per 14 minuti."
+              ]
+            },
+            {
+              "id": "panatura-curry-cavolfiore",
+              "product": "Panatura Curry",
+              "productSlug": "panatura-curry",
+              "title": "Cavolfiore croccante al curry",
+              "intro": "Spicchi di cavolfiore arrosto con cuore morbido.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "1 cavolfiore",
+                "Panatura Curry",
+                "Yogurt bianco",
+                "Semi di sesamo",
+                "Coriandolo fresco"
+              ],
+              "steps": [
+                "Dividi il cavolfiore in cimette e spennellale con yogurt.",
+                "Cospargi di panatura e semi di sesamo.",
+                "Inforna a 210 °C per 18 minuti mescolando una volta."
+              ]
+            },
+            {
+              "id": "panatura-curry-ceci",
+              "product": "Panatura Curry",
+              "productSlug": "panatura-curry",
+              "title": "Polpette di ceci al curry",
+              "intro": "Finger food vegetariano con crosta speziata.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "400 g di ceci cotti",
+                "Panatura Curry",
+                "Tahina",
+                "Cipollotto",
+                "Succo di lime"
+              ],
+              "steps": [
+                "Frulla i ceci con tahina, cipollotto e lime.",
+                "Forma polpette, passale nella panatura e un filo d'olio.",
+                "Cuoci in forno a 200 °C per 15 minuti finché dorate."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Panatura Mais Croccante",
+          "slug": "panatura-mais-croccante",
+          "summary": "Corn flakes e spezie per una croccantezza spettacolare.",
+          "accentColor": "#f6b85d",
+          "ingredients": [
+            "Pangrattato",
+            "Farina di mais",
+            "Corn flakes frantumati",
+            "Paprika dolce",
+            "Sale marino"
+          ],
+          "pairings": {
+            "protein": "Petto di pollo",
+            "vegetable": "Insalata di cavolo cappuccio",
+            "carb": "Pane soffice al latte"
+          },
+          "recipes": [
+            {
+              "id": "panatura-mais-nuggets",
+              "product": "Panatura Mais Croccante",
+              "productSlug": "panatura-mais-croccante",
+              "title": "Nuggets al mais",
+              "intro": "Bocconi croccanti e dorati perfetti per tutta la famiglia.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "500 g di pollo a cubetti",
+                "Panatura Mais Croccante",
+                "Latte",
+                "Farina",
+                "Olio di semi"
+              ],
+              "steps": [
+                "Marina i bocconcini nel latte per 20 minuti.",
+                "Passali in farina e quindi nella panatura.",
+                "Friggi a 170 °C per 4 minuti e scola bene."
+              ]
+            },
+            {
+              "id": "panatura-mais-merluzzo",
+              "product": "Panatura Mais Croccante",
+              "productSlug": "panatura-mais-croccante",
+              "title": "Filetti di merluzzo al mais",
+              "intro": "Crosta dorata che rimane asciutta e friabile.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "4 filetti di merluzzo",
+                "Panatura Mais Croccante",
+                "Maionese",
+                "Succo di limone",
+                "Prezzemolo"
+              ],
+              "steps": [
+                "Spennella i filetti con un velo di maionese.",
+                "Passali nella panatura e adagia su teglia.",
+                "Cuoci a 200 °C per 15 minuti e completa con limone."
+              ]
+            },
+            {
+              "id": "panatura-mais-tacos",
+              "product": "Panatura Mais Croccante",
+              "productSlug": "panatura-mais-croccante",
+              "title": "Tacos di gamberi croccanti",
+              "intro": "Ripieno fragrante da abbinare a salse fresche.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "16 gamberi puliti",
+                "Panatura Mais Croccante",
+                "Albume",
+                "Tortillas",
+                "Salsa allo yogurt"
+              ],
+              "steps": [
+                "Passa i gamberi nell'albume e poi nella panatura.",
+                "Friggi velocemente in olio caldo per 2 minuti.",
+                "Servi nei tacos con lattuga e salsa allo yogurt."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Panatura BBQ",
+          "slug": "panatura-bbq",
+          "summary": "Note dolci e affumicate per dare carattere a grigliate e arrosti.",
+          "accentColor": "#d6722c",
+          "ingredients": [
+            "Pangrattato",
+            "Zucchero di canna",
+            "Paprika affumicata",
+            "Aglio in polvere",
+            "Fumo liquido essiccato"
+          ],
+          "pairings": {
+            "protein": "Costine di maiale",
+            "vegetable": "Pannocchie grigliate",
+            "carb": "Pane di segale"
+          },
+          "recipes": [
+            {
+              "id": "panatura-bbq-alette",
+              "product": "Panatura BBQ",
+              "productSlug": "panatura-bbq",
+              "title": "Alette di pollo alla BBQ",
+              "intro": "Glassa asciutta e ricca che caramella in forno.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "1 kg di alette di pollo",
+                "Panatura BBQ",
+                "Olio di semi",
+                "Sale",
+                "Salsa piccante"
+              ],
+              "steps": [
+                "Tampona le alette e massaggiale con olio e sale.",
+                "Passale nella panatura e disponile su griglia.",
+                "Cuoci a 200 °C per 30 minuti girandole a metà cottura."
+              ]
+            },
+            {
+              "id": "panatura-bbq-costine",
+              "product": "Panatura BBQ",
+              "productSlug": "panatura-bbq",
+              "title": "Costine gratinate",
+              "intro": "Carne tenera con copertura caramellata.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "1,5 kg di costine",
+                "Panatura BBQ",
+                "Salsa barbecue",
+                "Miele",
+                "Birra ambrata"
+              ],
+              "steps": [
+                "Cuoci lentamente le costine in forno coperto con birra.",
+                "Spennella con salsa e miele, poi spolvera di panatura.",
+                "Gratina sotto il grill per 10 minuti finché croccanti."
+              ]
+            },
+            {
+              "id": "panatura-bbq-seitan",
+              "product": "Panatura BBQ",
+              "productSlug": "panatura-bbq",
+              "title": "Spiedini di seitan affumicato",
+              "intro": "Alternativa vegetale dal sapore deciso.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "400 g di seitan",
+                "Panatura BBQ",
+                "Salsa di soia",
+                "Sciroppo d'acero",
+                "Peperoni"
+              ],
+              "steps": [
+                "Marina il seitan in salsa di soia e sciroppo d'acero.",
+                "Infilza con peperoni e cospargi con la panatura.",
+                "Cuoci su piastra ben calda per 8 minuti girando spesso."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Panatura Semplice",
+          "slug": "panatura-semplice",
+          "summary": "La panatura classica con aglio e prezzemolo per piatti di tutti i giorni.",
+          "accentColor": "#e0a96a",
+          "ingredients": [
+            "Pangrattato artigianale",
+            "Prezzemolo",
+            "Aglio disidratato",
+            "Olio extravergine",
+            "Sale marino"
+          ],
+          "pairings": {
+            "protein": "Fettine di tacchino",
+            "vegetable": "Verdure al forno",
+            "carb": "Patate novelle"
+          },
+          "recipes": [
+            {
+              "id": "panatura-semplice-cotolette",
+              "product": "Panatura Semplice",
+              "productSlug": "panatura-semplice",
+              "title": "Cotolette di tacchino",
+              "intro": "Un classico intramontabile pronto in pochi minuti.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "4 fettine di tacchino",
+                "Panatura Semplice",
+                "Uova",
+                "Farina",
+                "Olio di semi"
+              ],
+              "steps": [
+                "Passa le fettine in farina, uovo e panatura.",
+                "Friggi a 170 °C fino a doratura.",
+                "Scola su carta assorbente e sala leggermente."
+              ]
+            },
+            {
+              "id": "panatura-semplice-verdure",
+              "product": "Panatura Semplice",
+              "productSlug": "panatura-semplice",
+              "title": "Verdure gratinate di stagione",
+              "intro": "Contorno casalingo con cuore morbido e superficie dorata.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "Zucchine",
+                "Pomodorini",
+                "Panatura Semplice",
+                "Parmigiano",
+                "Origano"
+              ],
+              "steps": [
+                "Affetta le verdure e sistemale in pirofila.",
+                "Condisci con olio, panatura e parmigiano.",
+                "Cuoci a 190 °C per 20 minuti."
+              ]
+            },
+            {
+              "id": "panatura-semplice-frittata",
+              "product": "Panatura Semplice",
+              "productSlug": "panatura-semplice",
+              "title": "Frittata al forno in crosta",
+              "intro": "Fetta compatta con bordo croccante e profumato.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "6 uova",
+                "Panatura Semplice",
+                "Ricotta",
+                "Spinaci",
+                "Noce moscata"
+              ],
+              "steps": [
+                "Sbatti le uova con ricotta e noce moscata.",
+                "Aggiungi spinaci saltati e versa in teglia cosparsa di panatura.",
+                "Spolvera con altra panatura e cuoci a 180 °C per 25 minuti."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Panatura Bacon",
+          "slug": "panatura-bacon",
+          "summary": "Sapore intenso di bacon tostato per piatti ricchi e conviviali.",
+          "accentColor": "#f08a5d",
+          "ingredients": [
+            "Pangrattato",
+            "Bacon essiccato",
+            "Cipolla disidratata",
+            "Paprika dolce",
+            "Pepe nero"
+          ],
+          "pairings": {
+            "protein": "Filetto di maiale",
+            "vegetable": "Fagiolini croccanti",
+            "carb": "Pane ai cereali"
+          },
+          "recipes": [
+            {
+              "id": "panatura-bacon-medaglioni",
+              "product": "Panatura Bacon",
+              "productSlug": "panatura-bacon",
+              "title": "Medaglioni di maiale croccanti",
+              "intro": "Filetti succosi con crosta saporita al bacon.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "600 g di filetto di maiale",
+                "Panatura Bacon",
+                "Senape",
+                "Rosmarino",
+                "Sale"
+              ],
+              "steps": [
+                "Taglia il filetto in medaglioni e spennella con senape.",
+                "Passa nella panatura aromatizzata al bacon.",
+                "Rosola in padella e termina la cottura in forno per 6 minuti."
+              ]
+            },
+            {
+              "id": "panatura-bacon-fagiolini",
+              "product": "Panatura Bacon",
+              "productSlug": "panatura-bacon",
+              "title": "Fagiolini croccanti",
+              "intro": "Verdure al dente con topping sfizioso.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "400 g di fagiolini",
+                "Panatura Bacon",
+                "Mandorle a lamelle",
+                "Burro",
+                "Limone"
+              ],
+              "steps": [
+                "Sbollenta i fagiolini e raffreddali.",
+                "Salta in padella con burro, aggiungi panatura e mandorle.",
+                "Profuma con scorza di limone e servi subito."
+              ]
+            },
+            {
+              "id": "panatura-bacon-uova",
+              "product": "Panatura Bacon",
+              "productSlug": "panatura-bacon",
+              "title": "Uova ripiene croccanti",
+              "intro": "Antipasto creativo con cuore cremoso e guscio saporito.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "6 uova sode",
+                "Panatura Bacon",
+                "Maionese",
+                "Erba cipollina",
+                "Paprika"
+              ],
+              "steps": [
+                "Taglia le uova a metà e preleva i tuorli.",
+                "Mescola con maionese, paprika ed erba cipollina.",
+                "Richiudi e passa nel bacon croccante prima di servire."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Panatura Pepe Rosa e Limone",
+          "slug": "panatura-pepe-rosa-limone",
+          "summary": "Un equilibrio di agrumi e note pepate per piatti freschi e raffinati.",
+          "accentColor": "#f5aa7b",
+          "ingredients": [
+            "Pangrattato",
+            "Pepe rosa",
+            "Scorza di limone",
+            "Prezzemolo",
+            "Sale marino"
+          ],
+          "pairings": {
+            "protein": "Filetti di branzino",
+            "vegetable": "Finocchi croccanti",
+            "carb": "Cous cous al limone"
+          },
+          "recipes": [
+            {
+              "id": "panatura-pepe-rosa-branzino",
+              "product": "Panatura Pepe Rosa e Limone",
+              "productSlug": "panatura-pepe-rosa-limone",
+              "title": "Branzino croccante agli agrumi",
+              "intro": "Pesce leggero con crosta profumata e brillante.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "4 filetti di branzino",
+                "Panatura Pepe Rosa e Limone",
+                "Olio extravergine",
+                "Sale",
+                "Fettine di limone"
+              ],
+              "steps": [
+                "Disponi il pesce in teglia leggermente unta.",
+                "Copri con la panatura aromatica e un filo d'olio.",
+                "Cuoci a 190 °C per 12 minuti e servi con limone fresco."
+              ]
+            },
+            {
+              "id": "panatura-pepe-rosa-finocchi",
+              "product": "Panatura Pepe Rosa e Limone",
+              "productSlug": "panatura-pepe-rosa-limone",
+              "title": "Finocchi gratinati",
+              "intro": "Contorno profumato con punte rosa e agrumate.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "2 finocchi",
+                "Panatura Pepe Rosa e Limone",
+                "Pecorino grattugiato",
+                "Burro",
+                "Timo"
+              ],
+              "steps": [
+                "Sbollenta i finocchi a spicchi per 5 minuti.",
+                "Disponili in pirofila, aggiungi burro, pecorino e panatura.",
+                "Cuoci a 200 °C per 18 minuti fino a doratura."
+              ]
+            },
+            {
+              "id": "panatura-pepe-rosa-arancine",
+              "product": "Panatura Pepe Rosa e Limone",
+              "productSlug": "panatura-pepe-rosa-limone",
+              "title": "Arancine agli agrumi",
+              "intro": "Versione gourmet con ripieno cremoso al limone.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "500 g di riso Carnaroli",
+                "Panatura Pepe Rosa e Limone",
+                "Ricotta",
+                "Scorza di limone",
+                "Olio per friggere"
+              ],
+              "steps": [
+                "Cuoci il riso con brodo agrumato e lascialo raffreddare.",
+                "Forma sfere con cuore di ricotta al limone.",
+                "Passa nella panatura e friggi a 170 °C finché dorate."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Panatura Crispy Pizzaiola",
+          "slug": "panatura-crispy-pizzaiola",
+          "summary": "Croccantezza extra con pomodoro e origano come in pizzeria.",
+          "accentColor": "#f28d52",
+          "ingredients": [
+            "Corn flakes",
+            "Pomodoro essiccato",
+            "Origano",
+            "Parmigiano",
+            "Aglio in polvere"
+          ],
+          "pairings": {
+            "protein": "Bocconcini di pollo",
+            "vegetable": "Zucchine ripiene",
+            "carb": "Pane tipo focaccia"
+          },
+          "recipes": [
+            {
+              "id": "panatura-crispy-pizzaiola-straccetti",
+              "product": "Panatura Crispy Pizzaiola",
+              "productSlug": "panatura-crispy-pizzaiola",
+              "title": "Straccetti di pollo pizzaiola",
+              "intro": "Fili croccanti con cuore succoso da servire con salse leggere.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "500 g di pollo a straccetti",
+                "Panatura Crispy Pizzaiola",
+                "Farina",
+                "Uova",
+                "Olio per friggere"
+              ],
+              "steps": [
+                "Infarina gli straccetti, passali nell'uovo e quindi nella panatura.",
+                "Friggi per 3 minuti in olio caldo.",
+                "Scola su carta e completa con sale e origano fresco."
+              ]
+            },
+            {
+              "id": "panatura-crispy-pizzaiola-zucchine",
+              "product": "Panatura Crispy Pizzaiola",
+              "productSlug": "panatura-crispy-pizzaiola",
+              "title": "Zucchine ripiene pizzaiola",
+              "intro": "Ripieno filante con topping croccante e saporito.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "4 zucchine tonde",
+                "Panatura Crispy Pizzaiola",
+                "Mozzarella",
+                "Pomodoro",
+                "Basilico"
+              ],
+              "steps": [
+                "Svuota le zucchine e cuoci la polpa con pomodoro.",
+                "Riempi con mozzarella e farcia, copri con la panatura.",
+                "Inforna a 190 °C per 20 minuti finché dorate."
+              ]
+            },
+            {
+              "id": "panatura-crispy-pizzaiola-mozzarella",
+              "product": "Panatura Crispy Pizzaiola",
+              "productSlug": "panatura-crispy-pizzaiola",
+              "title": "Mozzarelle in carrozza pizzaiola",
+              "intro": "Versione street food con crosta super croccante.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "8 fette di pan brioche",
+                "Panatura Crispy Pizzaiola",
+                "Mozzarella",
+                "Acciughe",
+                "Latte"
+              ],
+              "steps": [
+                "Farcisci i sandwich con mozzarella e acciughe.",
+                "Passali in latte, farina e panatura croccante.",
+                "Friggi in olio profondo a 170 °C fino a doratura."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Panatura Crispy BBQ",
+          "slug": "panatura-crispy-bbq",
+          "summary": "Granella croccante con zucchero e paprika affumicata.",
+          "accentColor": "#d85f32",
+          "ingredients": [
+            "Corn flakes",
+            "Paprika affumicata",
+            "Zucchero di canna",
+            "Aglio in polvere",
+            "Sale affumicato"
+          ],
+          "pairings": {
+            "protein": "Alette di pollo",
+            "vegetable": "Patate dolci",
+            "carb": "Pane rustico"
+          },
+          "recipes": [
+            {
+              "id": "panatura-crispy-bbq-alette",
+              "product": "Panatura Crispy BBQ",
+              "productSlug": "panatura-crispy-bbq",
+              "title": "Alette croccanti crispy BBQ",
+              "intro": "Super croccanti con gusto dolce e affumicato.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "1 kg di alette di pollo",
+                "Panatura Crispy BBQ",
+                "Olio",
+                "Sale",
+                "Pepe"
+              ],
+              "steps": [
+                "Tampona le alette e condiscile con olio.",
+                "Passale nella panatura premendo bene.",
+                "Inforna a 200 °C per 28 minuti girando a metà cottura."
+              ]
+            },
+            {
+              "id": "panatura-crispy-bbq-burger",
+              "product": "Panatura Crispy BBQ",
+              "productSlug": "panatura-crispy-bbq",
+              "title": "Burger di tacchino croccanti",
+              "intro": "Burger leggeri con copertura smoky e crunch irresistibile.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "4 burger di tacchino",
+                "Panatura Crispy BBQ",
+                "Salsa barbecue",
+                "Insalata",
+                "Pane integrale"
+              ],
+              "steps": [
+                "Spennella i burger con poca salsa barbecue.",
+                "Passali nella panatura croccante.",
+                "Cuoci in forno ventilato a 190 °C per 14 minuti."
+              ]
+            },
+            {
+              "id": "panatura-crispy-bbq-ribs-veg",
+              "product": "Panatura Crispy BBQ",
+              "productSlug": "panatura-crispy-bbq",
+              "title": "Ribs vegane di jackfruit",
+              "intro": "Filamenti vegetali che imitano le costine con crosta smoky.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "2 barattoli di jackfruit al naturale",
+                "Panatura Crispy BBQ",
+                "Salsa barbecue",
+                "Sciroppo d'acero",
+                "Semi di sesamo"
+              ],
+              "steps": [
+                "Scola il jackfruit e marinalo in salsa e sciroppo d'acero.",
+                "Disponi su teglia e cospargi di panatura.",
+                "Cuoci a 190 °C per 25 minuti finché caramellato."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Pangrattato Aglio e Prezzemolo",
+          "slug": "pangrattato-aglio-prezzemolo",
+          "summary": "Condimento classico pronto per gratinature saporite.",
+          "accentColor": "#d6b07f",
+          "ingredients": [
+            "Pangrattato",
+            "Aglio essiccato",
+            "Prezzemolo",
+            "Olio extravergine",
+            "Sale marino"
+          ],
+          "pairings": {
+            "protein": "Vongole veraci",
+            "vegetable": "Broccoli",
+            "carb": "Spaghetti"
+          },
+          "recipes": [
+            {
+              "id": "pangrattato-aglio-prezzemolo-spaghetti",
+              "product": "Pangrattato Aglio e Prezzemolo",
+              "productSlug": "pangrattato-aglio-prezzemolo",
+              "title": "Spaghetti aglio olio con mollica",
+              "intro": "Versione siciliana con mollica tostata profumata.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "400 g di spaghetti",
+                "Pangrattato Aglio e Prezzemolo",
+                "Olio extravergine",
+                "Peperoncino",
+                "Prezzemolo fresco"
+              ],
+              "steps": [
+                "Tosta la panatura in padella con olio finché dorata.",
+                "Cuoci la pasta e condiscila con olio e peperoncino.",
+                "Completa con la mollica croccante e prezzemolo."
+              ]
+            },
+            {
+              "id": "pangrattato-aglio-prezzemolo-broccoli",
+              "product": "Pangrattato Aglio e Prezzemolo",
+              "productSlug": "pangrattato-aglio-prezzemolo",
+              "title": "Broccoli gratinati",
+              "intro": "Verdure croccanti con cuore tenero.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "1 broccolo grande",
+                "Pangrattato Aglio e Prezzemolo",
+                "Acciughe",
+                "Pecorino",
+                "Olio extravergine"
+              ],
+              "steps": [
+                "Sbollenta i broccoli e scolali al dente.",
+                "Disponili in pirofila con acciughe e pecorino.",
+                "Copri con panatura e cuoci a 200 °C per 15 minuti."
+              ]
+            },
+            {
+              "id": "pangrattato-aglio-prezzemolo-vongole",
+              "product": "Pangrattato Aglio e Prezzemolo",
+              "productSlug": "pangrattato-aglio-prezzemolo",
+              "title": "Vongole gratinate",
+              "intro": "Antipasto saporito e profumato di mare.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "1 kg di vongole",
+                "Pangrattato Aglio e Prezzemolo",
+                "Prezzemolo",
+                "Vino bianco",
+                "Olio extravergine"
+              ],
+              "steps": [
+                "Apri le vongole in padella con vino bianco.",
+                "Disponile sui gusci e copri con panatura e prezzemolo.",
+                "Gratina a 220 °C per 5 minuti."
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "name": "Marinature",
       "description": "Marinature pronte per ricette ricche e profumate.",
       "items": [
-        "Marinatura al Limone",
-        "Marinatura Basilico e Rosmarino",
-        "Marinatura BBQ Affumicato",
-        "Marinatura Arrosto",
-        "Marinatura Curry"
+        {
+          "name": "Marinatura al Limone",
+          "slug": "marinatura-limone",
+          "summary": "Agrumi e olio extravergine per marinare pesce e carni bianche.",
+          "accentColor": "#f3d37a",
+          "ingredients": [
+            "Succo di limone",
+            "Scorza di limone",
+            "Olio extravergine",
+            "Rosmarino",
+            "Pepe bianco"
+          ],
+          "pairings": {
+            "protein": "Petto di pollo",
+            "vegetable": "Asparagi",
+            "carb": "Riso basmati"
+          },
+          "recipes": [
+            {
+              "id": "marinatura-limone-pollo",
+              "product": "Marinatura al Limone",
+              "productSlug": "marinatura-limone",
+              "title": "Pollo marinato agli agrumi",
+              "intro": "Carne tenera e profumata pronta da grigliare.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "600 g di petto di pollo",
+                "Marinatura al Limone",
+                "Sale",
+                "Pepe",
+                "Rosmarino"
+              ],
+              "steps": [
+                "Taglia il pollo a strisce e immergilo nella marinatura.",
+                "Lascia riposare 30 minuti e scolalo.",
+                "Cuoci su piastra rovente per 6 minuti."
+              ]
+            },
+            {
+              "id": "marinatura-limone-gamberi",
+              "product": "Marinatura al Limone",
+              "productSlug": "marinatura-limone",
+              "title": "Gamberi agli agrumi",
+              "intro": "Antipasto fresco con nota agrumata e erbacea.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "20 gamberi",
+                "Marinatura al Limone",
+                "Menta",
+                "Zeste di limone",
+                "Pepe rosa"
+              ],
+              "steps": [
+                "Marina i gamberi sgusciati per 15 minuti.",
+                "Scolali e saltali in padella calda per 2 minuti.",
+                "Servi con menta fresca e pepe rosa."
+              ]
+            },
+            {
+              "id": "marinatura-limone-tartare",
+              "product": "Marinatura al Limone",
+              "productSlug": "marinatura-limone",
+              "title": "Tartare di ricciola agli agrumi",
+              "intro": "Secondo raffinato con marinatura profonda e profumata.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "400 g di ricciola freschissima",
+                "Marinatura al Limone",
+                "Finocchietto",
+                "Capperi",
+                "Olio extravergine"
+              ],
+              "steps": [
+                "Taglia la ricciola a cubetti e condiscila con poca marinatura.",
+                "Lascia insaporire 10 minuti in frigorifero.",
+                "Completa con finocchietto e capperi prima di servire."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Marinatura Basilico e Rosmarino",
+          "slug": "marinatura-basilico-rosmarino",
+          "summary": "Erbe mediterranee fresche per carni e verdure alla griglia.",
+          "accentColor": "#b6d99b",
+          "ingredients": [
+            "Olio extravergine",
+            "Basilico",
+            "Rosmarino",
+            "Aglio",
+            "Sale grosso"
+          ],
+          "pairings": {
+            "protein": "Spiedini di pollo",
+            "vegetable": "Peperoni",
+            "carb": "Pane casereccio"
+          },
+          "recipes": [
+            {
+              "id": "marinatura-basilico-rosmarino-spiedini",
+              "product": "Marinatura Basilico e Rosmarino",
+              "productSlug": "marinatura-basilico-rosmarino",
+              "title": "Spiedini alle erbe",
+              "intro": "Bocconcini succosi con profumo intenso di erbe.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "600 g di pollo a cubetti",
+                "Marinatura Basilico e Rosmarino",
+                "Peperoni",
+                "Alloro",
+                "Sale"
+              ],
+              "steps": [
+                "Marina il pollo per almeno 1 ora.",
+                "Infilza con peperoni e foglie di alloro.",
+                "Griglia per 10 minuti girando spesso."
+              ]
+            },
+            {
+              "id": "marinatura-basilico-rosmarino-maiale",
+              "product": "Marinatura Basilico e Rosmarino",
+              "productSlug": "marinatura-basilico-rosmarino",
+              "title": "Filetto di maiale alle erbe",
+              "intro": "Carne tenera con crosticina aromatica.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "700 g di filetto di maiale",
+                "Marinatura Basilico e Rosmarino",
+                "Limone",
+                "Timo",
+                "Pepe"
+              ],
+              "steps": [
+                "Massaggia il filetto con la marinatura e lascia riposare 2 ore.",
+                "Rosola in padella calda e completa in forno a 180 °C per 12 minuti.",
+                "Servi a fette con fondo di cottura al limone."
+              ]
+            },
+            {
+              "id": "marinatura-basilico-rosmarino-caponata",
+              "product": "Marinatura Basilico e Rosmarino",
+              "productSlug": "marinatura-basilico-rosmarino",
+              "title": "Caponata di verdure marinate",
+              "intro": "Contorno siciliano profumato alle erbe mediterranee.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "Melanzane",
+                "Zucchine",
+                "Marinatura Basilico e Rosmarino",
+                "Pinoli",
+                "Uvetta"
+              ],
+              "steps": [
+                "Taglia le verdure a cubi e condiscile con la marinatura.",
+                "Cuoci in padella antiaderente finché morbide.",
+                "Completa con pinoli tostati e uvetta ammollata."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Marinatura BBQ Affumicato",
+          "slug": "marinatura-bbq-affumicato",
+          "summary": "Salsa densa e affumicata per carni dal sapore intenso.",
+          "accentColor": "#d87b47",
+          "ingredients": [
+            "Passata di pomodoro",
+            "Aceto di mele",
+            "Zucchero di canna",
+            "Paprika affumicata",
+            "Fumo liquido"
+          ],
+          "pairings": {
+            "protein": "Punta di petto",
+            "vegetable": "Pannocchie",
+            "carb": "Pane di mais"
+          },
+          "recipes": [
+            {
+              "id": "marinatura-bbq-affumicato-cosce",
+              "product": "Marinatura BBQ Affumicato",
+              "productSlug": "marinatura-bbq-affumicato",
+              "title": "Cosce di pollo affumicate",
+              "intro": "Glassa lucida con sentori smoky e dolci.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "6 cosce di pollo",
+                "Marinatura BBQ Affumicato",
+                "Sale",
+                "Pepe",
+                "Rosmarino"
+              ],
+              "steps": [
+                "Marina le cosce per almeno 3 ore.",
+                "Disponile su teglia e copri con la marinatura rimasta.",
+                "Cuoci a 190 °C per 40 minuti girandole un paio di volte."
+              ]
+            },
+            {
+              "id": "marinatura-bbq-affumicato-costine",
+              "product": "Marinatura BBQ Affumicato",
+              "productSlug": "marinatura-bbq-affumicato",
+              "title": "Costine glassate",
+              "intro": "Carne morbida e succosa con glassa lucida.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "1,5 kg di costine",
+                "Marinatura BBQ Affumicato",
+                "Miele",
+                "Birra scura",
+                "Peperoncino affumicato"
+              ],
+              "steps": [
+                "Marina le costine per tutta la notte.",
+                "Cuoci lentamente a 160 °C coprendo con carta forno.",
+                "Spennella con miele e termina a 220 °C per 10 minuti."
+              ]
+            },
+            {
+              "id": "marinatura-bbq-affumicato-jackfruit",
+              "product": "Marinatura BBQ Affumicato",
+              "productSlug": "marinatura-bbq-affumicato",
+              "title": "Jackfruit pulled pork",
+              "intro": "Versione vegetale del pulled pork con salsa affumicata.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "2 barattoli di jackfruit",
+                "Marinatura BBQ Affumicato",
+                "Cipolla rossa",
+                "Aceto",
+                "Semi di cumino"
+              ],
+              "steps": [
+                "Scola il jackfruit e sfilaccialo.",
+                "Cuoci in padella con cipolla e marinatura fino a caramellare.",
+                "Sfuma con aceto e aggiungi semi di cumino tostati."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Marinatura Arrosto",
+          "slug": "marinatura-arrosto",
+          "summary": "Rosmarino, salvia e vino bianco per arrosti succosi.",
+          "accentColor": "#e2be84",
+          "ingredients": [
+            "Olio extravergine",
+            "Rosmarino",
+            "Salvia",
+            "Vino bianco",
+            "Pepe nero"
+          ],
+          "pairings": {
+            "protein": "Arrosto di vitello",
+            "vegetable": "Patate",
+            "carb": "Pane integrale"
+          },
+          "recipes": [
+            {
+              "id": "marinatura-arrosto-lonza",
+              "product": "Marinatura Arrosto",
+              "productSlug": "marinatura-arrosto",
+              "title": "Lonza marinata alle erbe",
+              "intro": "Carne morbida con fondo aromatico pronto da affettare.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "800 g di lonza",
+                "Marinatura Arrosto",
+                "Aglio",
+                "Sale",
+                "Pepe"
+              ],
+              "steps": [
+                "Marina la lonza per almeno 4 ore.",
+                "Rosola in casseruola e sfuma con vino bianco.",
+                "Cuoci coperto per 40 minuti e lascia riposare prima di affettare."
+              ]
+            },
+            {
+              "id": "marinatura-arrosto-vitello",
+              "product": "Marinatura Arrosto",
+              "productSlug": "marinatura-arrosto",
+              "title": "Arrosto di vitello tradizionale",
+              "intro": "Secondo delle feste con salsa profumata.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "1 kg di vitello",
+                "Marinatura Arrosto",
+                "Brodo vegetale",
+                "Cipolla",
+                "Carota"
+              ],
+              "steps": [
+                "Massaggia la carne con la marinatura e lascia riposare una notte.",
+                "Sigilla in casseruola e aggiungi il brodo.",
+                "Cuoci lentamente per 1 ora e filtra il fondo per servirlo a parte."
+              ]
+            },
+            {
+              "id": "marinatura-arrosto-faraona",
+              "product": "Marinatura Arrosto",
+              "productSlug": "marinatura-arrosto",
+              "title": "Faraona ripiena alle erbe",
+              "intro": "Piatto ricco con ripieno morbido e pelle croccante.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "1 faraona",
+                "Marinatura Arrosto",
+                "Salsiccia",
+                "Castagne",
+                "Salvia fresca"
+              ],
+              "steps": [
+                "Marina la faraona per 6 ore.",
+                "Farcisci con salsiccia, castagne e salvia.",
+                "Cuoci in forno a 180 °C per 55 minuti bagnando con il fondo."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Marinatura Curry",
+          "slug": "marinatura-curry",
+          "summary": "Yogurt e spezie orientali per carni morbide e profumate.",
+          "accentColor": "#f2b75d",
+          "ingredients": [
+            "Yogurt intero",
+            "Mix di curry",
+            "Paprika dolce",
+            "Zenzero",
+            "Succo di lime"
+          ],
+          "pairings": {
+            "protein": "Cosce di pollo",
+            "vegetable": "Cavolfiore",
+            "carb": "Riso basmati"
+          },
+          "recipes": [
+            {
+              "id": "marinatura-curry-pollo",
+              "product": "Marinatura Curry",
+              "productSlug": "marinatura-curry",
+              "title": "Pollo tandoori veloce",
+              "intro": "Cosce succose con crosta speziata.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "6 cosce di pollo",
+                "Marinatura Curry",
+                "Sale",
+                "Pepe",
+                "Coriandolo"
+              ],
+              "steps": [
+                "Incidi le cosce e massaggiale con la marinatura.",
+                "Lascia riposare 2 ore e disponile su griglia.",
+                "Cuoci a 200 °C per 30 minuti."
+              ]
+            },
+            {
+              "id": "marinatura-curry-gamberi",
+              "product": "Marinatura Curry",
+              "productSlug": "marinatura-curry",
+              "title": "Gamberi al curry e lime",
+              "intro": "Secondo profumato e leggero.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "400 g di gamberi",
+                "Marinatura Curry",
+                "Latte di cocco",
+                "Peperoncino",
+                "Foglie di lime"
+              ],
+              "steps": [
+                "Marina i gamberi per 20 minuti.",
+                "Saltali in padella con latte di cocco e peperoncino.",
+                "Completa con foglie di lime spezzettate."
+              ]
+            },
+            {
+              "id": "marinatura-curry-agnello",
+              "product": "Marinatura Curry",
+              "productSlug": "marinatura-curry",
+              "title": "Spiedini di agnello speziati",
+              "intro": "Carne morbida con sentori orientali.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "600 g di polpa di agnello",
+                "Marinatura Curry",
+                "Cipollotti",
+                "Semi di sesamo",
+                "Yogurt greco"
+              ],
+              "steps": [
+                "Marina l'agnello per almeno 4 ore.",
+                "Infilza con cipollotti e cospargi di semi di sesamo.",
+                "Griglia su brace o piastra per 8 minuti."
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "name": "Aromi",
       "description": "Aromi per arrosti e preparazioni di pasta.",
       "items": [
-        "Aromi per arrosto",
-        "Spaghettata aglio, olio e prezzemolo",
-        "Fiori eduli per cucina"
+        {
+          "name": "Aromi per arrosto",
+          "slug": "aromi-per-arrosto",
+          "summary": "Mix classico di erbe e spezie per arrosti profumati.",
+          "accentColor": "#d2c19f",
+          "ingredients": [
+            "Rosmarino",
+            "Salvia",
+            "Alloro",
+            "Bacche di ginepro",
+            "Pepe nero"
+          ],
+          "pairings": {
+            "protein": "Arrosto di vitello",
+            "vegetable": "Patate al forno",
+            "carb": "Pane rustico"
+          },
+          "recipes": [
+            {
+              "id": "aromi-arrosto-patate",
+              "product": "Aromi per arrosto",
+              "productSlug": "aromi-per-arrosto",
+              "title": "Patate arrosto alle erbe",
+              "intro": "Patate croccanti fuori e morbide dentro.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "1 kg di patate",
+                "Aromi per arrosto",
+                "Olio extravergine",
+                "Sale",
+                "Spicchi d'aglio"
+              ],
+              "steps": [
+                "Sbollenta le patate a pezzi per 5 minuti.",
+                "Scolale, condiscile con olio e aromi.",
+                "Cuoci a 200 °C per 30 minuti girando un paio di volte."
+              ]
+            },
+            {
+              "id": "aromi-arrosto-filetto",
+              "product": "Aromi per arrosto",
+              "productSlug": "aromi-per-arrosto",
+              "title": "Filetto di maiale alle erbe",
+              "intro": "Carne tenera e profumata in pochi passaggi.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "700 g di filetto di maiale",
+                "Aromi per arrosto",
+                "Olio extravergine",
+                "Sale",
+                "Pepe"
+              ],
+              "steps": [
+                "Massaggia il filetto con gli aromi e olio.",
+                "Rosola in padella e termina in forno a 180 °C per 12 minuti.",
+                "Lascia riposare e affetta finemente."
+              ]
+            },
+            {
+              "id": "aromi-arrosto-farcito",
+              "product": "Aromi per arrosto",
+              "productSlug": "aromi-per-arrosto",
+              "title": "Arrosto farcito alle erbe",
+              "intro": "Fetta coreografica con ripieno di spinaci e formaggio.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "1,2 kg di fesa di tacchino",
+                "Aromi per arrosto",
+                "Spinaci",
+                "Provola",
+                "Prosciutto cotto"
+              ],
+              "steps": [
+                "Apri la fesa a libro e condiscila con gli aromi.",
+                "Farcisci con spinaci, provola e prosciutto.",
+                "Arrotola, lega e cuoci in forno a 180 °C per 55 minuti."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Spaghettata aglio, olio e prezzemolo",
+          "slug": "spaghettata-aglio-olio-prezzemolo",
+          "summary": "Mix pronto per condire spaghetti e bruschette.",
+          "accentColor": "#e0d9c7",
+          "ingredients": [
+            "Aglio essiccato",
+            "Prezzemolo",
+            "Peperoncino",
+            "Sale marino",
+            "Olio extravergine"
+          ],
+          "pairings": {
+            "protein": "Vongole",
+            "vegetable": "Cime di rapa",
+            "carb": "Spaghetti"
+          },
+          "recipes": [
+            {
+              "id": "spaghettata-aglio-olio-prezzemolo-spaghetti",
+              "product": "Spaghettata aglio, olio e prezzemolo",
+              "productSlug": "spaghettata-aglio-olio-prezzemolo",
+              "title": "Spaghetti express",
+              "intro": "Il classico piatto pronto in 10 minuti.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "400 g di spaghetti",
+                "Spaghettata aglio, olio e prezzemolo",
+                "Olio extravergine",
+                "Peperoncino fresco",
+                "Prezzemolo"
+              ],
+              "steps": [
+                "Tosta il mix in padella con olio.",
+                "Cuoci la pasta al dente e manteca con il condimento.",
+                "Completa con peperoncino e prezzemolo fresco."
+              ]
+            },
+            {
+              "id": "spaghettata-aglio-olio-prezzemolo-vongole",
+              "product": "Spaghettata aglio, olio e prezzemolo",
+              "productSlug": "spaghettata-aglio-olio-prezzemolo",
+              "title": "Spaghetti alle vongole",
+              "intro": "Versione profumata di mare con mix pronto.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "1 kg di vongole",
+                "Spaghettata aglio, olio e prezzemolo",
+                "Vino bianco",
+                "Olio extravergine",
+                "Prezzemolo"
+              ],
+              "steps": [
+                "Apri le vongole con vino bianco in padella.",
+                "Aggiungi il mix aromatizzato e manteca con la pasta.",
+                "Servi con prezzemolo tritato."
+              ]
+            },
+            {
+              "id": "spaghettata-aglio-olio-prezzemolo-bruschette",
+              "product": "Spaghettata aglio, olio e prezzemolo",
+              "productSlug": "spaghettata-aglio-olio-prezzemolo",
+              "title": "Bruschette aromatiche",
+              "intro": "Antipasto veloce con pane croccante.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "Pane rustico",
+                "Spaghettata aglio, olio e prezzemolo",
+                "Pomodorini",
+                "Acciughe",
+                "Basilico"
+              ],
+              "steps": [
+                "Tosta il pane e spennella con olio.",
+                "Distribuisci il mix e i pomodorini con acciughe.",
+                "Completa con basilico e servi tiepido."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Fiori eduli per cucina",
+          "slug": "fiori-eduli-cucina",
+          "summary": "Petali essiccati per decorare e insaporire piatti creativi.",
+          "accentColor": "#f0b1c3",
+          "ingredients": [
+            "Petali di calendula",
+            "Petali di rosa",
+            "Fiordaliso",
+            "Erba cipollina",
+            "Semi di sesamo"
+          ],
+          "pairings": {
+            "protein": "Ricotta fresca",
+            "vegetable": "Insalate di stagione",
+            "carb": "Pane ai cereali"
+          },
+          "recipes": [
+            {
+              "id": "fiori-eduli-insalata",
+              "product": "Fiori eduli per cucina",
+              "productSlug": "fiori-eduli-cucina",
+              "title": "Insalata di primizie",
+              "intro": "Insalata scenografica con tocchi colorati.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "Misticanza",
+                "Fiori eduli per cucina",
+                "Fragole",
+                "Noci",
+                "Vinaigrette"
+              ],
+              "steps": [
+                "Componi l'insalata con misticanza e fragole.",
+                "Aggiungi noci e condisci con vinaigrette.",
+                "Completa con i fiori eduli prima di servire."
+              ]
+            },
+            {
+              "id": "fiori-eduli-risotto",
+              "product": "Fiori eduli per cucina",
+              "productSlug": "fiori-eduli-cucina",
+              "title": "Risotto ai fiori eduli",
+              "intro": "Primo piatto cremoso con finale profumato.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "320 g di riso Carnaroli",
+                "Fiori eduli per cucina",
+                "Brodo vegetale",
+                "Parmigiano",
+                "Burro"
+              ],
+              "steps": [
+                "Tosta il riso e sfuma con vino bianco.",
+                "Cuoci aggiungendo brodo e manteca con burro e parmigiano.",
+                "Decora con i fiori eduli e scorza di limone."
+              ]
+            },
+            {
+              "id": "fiori-eduli-caprino",
+              "product": "Fiori eduli per cucina",
+              "productSlug": "fiori-eduli-cucina",
+              "title": "Caprino in crosta di fiori",
+              "intro": "Finger food elegante dal gusto delicato.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "Formaggi caprini",
+                "Fiori eduli per cucina",
+                "Miele",
+                "Pistacchi",
+                "Pane ai cereali"
+              ],
+              "steps": [
+                "Passa i caprini nei fiori miscelati con pistacchi tritati.",
+                "Adagia su fette di pane tostato.",
+                "Completa con un filo di miele prima di servire."
+              ]
+            }
+          ]
+        }
       ]
     },
     {
       "name": "Pesto",
       "description": "Pesto di pistacchio cremoso.",
       "items": [
-        "Pesto di pistacchio cremoso"
+        {
+          "name": "Pesto di pistacchio cremoso",
+          "slug": "pesto-pistacchio-cremoso",
+          "summary": "Pistacchi di Bronte, olio extravergine e formaggio per un condimento ricco.",
+          "accentColor": "#8fb88a",
+          "ingredients": [
+            "Pistacchi di Bronte",
+            "Olio extravergine",
+            "Parmigiano Reggiano",
+            "Basilico",
+            "Sale marino"
+          ],
+          "pairings": {
+            "protein": "Filetto di salmone",
+            "vegetable": "Insalata di agrumi",
+            "carb": "Pasta fresca"
+          },
+          "recipes": [
+            {
+              "id": "pesto-pistacchio-spaghetti",
+              "product": "Pesto di pistacchio cremoso",
+              "productSlug": "pesto-pistacchio-cremoso",
+              "title": "Spaghetti al pesto di pistacchio",
+              "intro": "Primo piatto cremoso pronto in pochi minuti.",
+              "difficulty": "Semplice",
+              "ingredients": [
+                "400 g di spaghetti",
+                "Pesto di pistacchio cremoso",
+                "Granella di pistacchio",
+                "Olio extravergine",
+                "Sale"
+              ],
+              "steps": [
+                "Cuoci la pasta in acqua salata.",
+                "Diluisci il pesto con poca acqua di cottura.",
+                "Manteca e completa con granella di pistacchio."
+              ]
+            },
+            {
+              "id": "pesto-pistacchio-lasagnetta",
+              "product": "Pesto di pistacchio cremoso",
+              "productSlug": "pesto-pistacchio-cremoso",
+              "title": "Lasagnetta bianca al pistacchio",
+              "intro": "Piatto elegante a strati con besciamella leggera.",
+              "difficulty": "Medio",
+              "ingredients": [
+                "Sfoglie di lasagna fresca",
+                "Pesto di pistacchio cremoso",
+                "Besciamella",
+                "Ricotta",
+                "Granella di pistacchio"
+              ],
+              "steps": [
+                "Alterna strati di sfoglia, besciamella e pesto.",
+                "Completa con ricotta e granella.",
+                "Cuoci a 180 °C per 25 minuti fino a doratura."
+              ]
+            },
+            {
+              "id": "pesto-pistacchio-tartare",
+              "product": "Pesto di pistacchio cremoso",
+              "productSlug": "pesto-pistacchio-cremoso",
+              "title": "Tartare di tonno al pistacchio",
+              "intro": "Secondo raffinato con contrasto dolce-salato.",
+              "difficulty": "Cuoco",
+              "ingredients": [
+                "300 g di tonno fresco",
+                "Pesto di pistacchio cremoso",
+                "Arancia",
+                "Olio extravergine",
+                "Sale di Trapani"
+              ],
+              "steps": [
+                "Taglia il tonno a cubetti e condiscilo con olio e sale.",
+                "Aggiungi un cucchiaino di pesto e scorza di arancia.",
+                "Servi su piatto freddo con granella di pistacchio."
+              ]
+            }
+          ]
+        }
       ]
     }
   ]
